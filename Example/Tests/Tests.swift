@@ -1,5 +1,5 @@
 import XCTest
-//import BaseKit
+import ios_base_foundation
 
 class Tests: XCTestCase {
     

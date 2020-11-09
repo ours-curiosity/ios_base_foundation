@@ -1,16 +1,27 @@
 PODS:
-  - BaseKit (0.1.1)
+  - ios_base_foundation (0.5.0):
+    - SnapKit (= 5.0.1)
+    - Toast-Swift (= 5.0.1)
+  - SnapKit (5.0.1)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
-  - BaseKit (from `../`)
+  - ios_base_foundation (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
+    - Toast-Swift
 
 EXTERNAL SOURCES:
-  BaseKit:
+  ios_base_foundation:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BaseKit: 6f9367f08356e71ffe811605c8f610e354108936
+  ios_base_foundation: 57f30b0e0c3c3289cdd28a110763ab076b2b1536
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 6eaaa9737580ce71c88cef4a77f3f6c99ae09684
+PODFILE CHECKSUM: 64fee78ea6d6ce14e94fa421431050808201750e
 
 COCOAPODS: 1.10.0

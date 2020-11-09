@@ -1,22 +1,32 @@
 {
   "name": "ios_base_foundation",
   "version": "0.1.0",
-  "summary": "A short description of ios_base_foundation.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/tliens/ios_base_foundation",
+  "summary": "iOS 基础加速库.",
+  "description": "你可以使用base_foundation来构建新的app.",
+  "homepage": "https://github.com/ours-curiosity/ios_base_foundation",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "tliens": "maninios@163.com"
+    "ours-curiosity": "ours.curiosity@gmail.com"
   },
   "source": {
-    "git": "https://github.com/tliens/ios_base_foundation.git",
+    "git": "https://github.com/ours-curiosity/ios_base_foundation.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
-  "source_files": "ios_base_foundation/Classes/**/*"
+  "source_files": "ios_base_foundation/Classes/**/*",
+  "frameworks": [
+    "UIKit",
+    "Foundation",
+    "CoreGraphics"
+  ],
+  "dependencies": {
+    "SnapKit": [
+      "~> 5.0"
+    ]
+  }
 }

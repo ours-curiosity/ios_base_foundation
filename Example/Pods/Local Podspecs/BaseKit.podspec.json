@@ -20,19 +20,11 @@
     "tag": "0.1.1"
   },
   "social_media_url": "https://ours-curiosity.github.io/",
-  "source_files": "BaseKit/Class/**/*",
+  "source_files": "BaseKit/Classes/**/*",
   "frameworks": [
     "UIKit",
     "Foundation",
     "CoreGraphics"
   ],
-  "dependencies": {
-    "SnapKit": [
-      "~> 5.0"
-    ],
-    "Toast-Swift": [
-      "~> 5.0"
-    ]
-  },
   "swift_version": "5.0"
 }

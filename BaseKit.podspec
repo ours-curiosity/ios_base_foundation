@@ -32,9 +32,9 @@ Pod::Spec.new do |s|
 
     # source_files 源文件目录以及子目录
     s.source_files = 'BaseKit/**/*'
-    s.resource_bundles = {
-        'BaseKit' => ['BaseKit/**/*.png']
-    }
+#    s.resource_bundles = {
+#        'BaseKit' => ['BaseKit/**/*.png']
+#    }
 
     s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
     

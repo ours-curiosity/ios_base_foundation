@@ -20,10 +20,10 @@
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "BaseKit/Classes/**/*",
+  "source_files": "BaseKit/**/*",
   "resource_bundles": {
     "BaseKit": [
-      "BaseKit/Assets/*.png"
+      "BaseKit/**/*.png"
     ]
   },
   "public_header_files": "Pod/Classes/**/*.h",

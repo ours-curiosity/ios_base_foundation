@@ -23,9 +23,9 @@ Pod::Spec.new do |s|
     s.social_media_url = 'https://ours-curiosity.github.io/'
     s.ios.deployment_target = '10.0'
     # source_files 源文件目录以及子目录
-    s.source_files = 'BaseKit/Classes/**/*'
+    s.source_files = 'BaseKit/**/*'
     s.resource_bundles = {
-        'BaseKit' => ['BaseKit/Assets/*.png']
+        'BaseKit' => ['BaseKit/**/*.png']
     }
     s.public_header_files = 'Pod/Classes/**/*.h'
     s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'

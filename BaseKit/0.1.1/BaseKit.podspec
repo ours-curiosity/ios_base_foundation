@@ -35,8 +35,8 @@ Pod::Spec.new do |s|
 
     s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
     
-    #依赖第三方库
-    s.dependency 'SnapKit', '= 5.0.1'
-    s.dependency 'Toast-Swift', '= 5.0.1'
+#    #依赖第三方库
+#    s.dependency 'SnapKit', '= 5.0.1'
+#    s.dependency 'Toast-Swift', '= 5.0.1'
 
 end

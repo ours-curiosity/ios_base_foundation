@@ -1,0 +1,16 @@
+PODS:
+  - ios_base_foundation (0.1.0)
+
+DEPENDENCIES:
+  - ios_base_foundation (from `../`)
+
+EXTERNAL SOURCES:
+  ios_base_foundation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ios_base_foundation: ac2a359da86cc7f2e17f334b95828b85b53a487d
+
+PODFILE CHECKSUM: 3e656de4e0b1df79dfcde33fc2817fa2080f12ee
+
+COCOAPODS: 1.10.0

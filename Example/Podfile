@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ios_base_foundation_Example' do
+  pod 'ios_base_foundation', :path => '../'
+
+  target 'ios_base_foundation_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

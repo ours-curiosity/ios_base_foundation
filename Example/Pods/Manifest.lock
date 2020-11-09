@@ -1,5 +1,5 @@
 PODS:
-  - BaseKit (0.1.0):
+  - BaseKit (0.1.1):
     - SnapKit (~> 5.0)
     - Toast-Swift (~> 5.0)
   - SnapKit (5.0.1)
@@ -18,7 +18,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BaseKit: e8d031da3c40313f09636e615f37de408196395a
+  BaseKit: 8c13801b666d2642e6b4dfd611af8765b31a3030
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "summary": "iOS 基础加速库.",
   "description": "你可以使用base_foundation来构建新的app. ios 10.0, swift 5",
+  "swift_versions": "5.0",
   "homepage": "https://github.com/ours-curiosity/ios_base_foundation",
   "license": {
     "type": "MIT",
@@ -34,7 +35,11 @@
   "dependencies": {
     "SnapKit": [
       "~> 5.0"
+    ],
+    "Toast-Swift": [
+      "~> 5.0"
     ]
   },
-  "static_framework": true
+  "static_framework": true,
+  "swift_version": "5.0"
 }

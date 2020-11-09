@@ -1,7 +1,9 @@
 PODS:
   - BaseKit (0.1.0):
     - SnapKit (~> 5.0)
+    - Toast-Swift (~> 5.0)
   - SnapKit (5.0.1)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - BaseKit (from `../`)
@@ -9,14 +11,16 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - SnapKit
+    - Toast-Swift
 
 EXTERNAL SOURCES:
   BaseKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BaseKit: 0e40508d628ca6bec0023304a25a7c0e790fbbde
+  BaseKit: 8f2c77b2b67637754bb40abf391bdc0d36398790
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
 PODFILE CHECKSUM: 6eaaa9737580ce71c88cef4a77f3f6c99ae09684
 

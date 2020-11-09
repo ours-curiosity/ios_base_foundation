@@ -1,4 +1,6 @@
 # ios_base_foundation
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ios_base_foundation.svg)](https://img.shields.io/cocoapods/v/ios_base_foundation.svg)
+[![Platform](https://img.shields.io/cocoapods/p/ios_base_foundation.svg?style=flat)](https://ios_base_foundation.github.io/Alamofire)
 
 ios 基础库
 

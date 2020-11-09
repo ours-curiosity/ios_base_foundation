@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "summary": "iOS 基础加速库.",
   "description": "你可以使用base_foundation来构建新的app. ios 10.0, swift 5",
+  "platforms": {
+    "ios": "10.0"
+  },
   "swift_versions": "5.0",
   "homepage": "https://github.com/ours-curiosity/ios_base_foundation",
   "license": {
@@ -17,16 +20,12 @@
     "tag": "0.1.0"
   },
   "social_media_url": "https://ours-curiosity.github.io/",
-  "platforms": {
-    "ios": "10.0"
-  },
   "source_files": "BaseKit/**/*",
   "resource_bundles": {
     "BaseKit": [
       "BaseKit/**/*.png"
     ]
   },
-  "public_header_files": "Pod/Classes/**/*.h",
   "frameworks": [
     "UIKit",
     "Foundation",
@@ -40,6 +39,5 @@
       "~> 5.0"
     ]
   },
-  "static_framework": true,
   "swift_version": "5.0"
 }

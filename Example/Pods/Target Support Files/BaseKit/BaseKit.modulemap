@@ -1,0 +1,6 @@
+framework module BaseKit {
+  umbrella header "BaseKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

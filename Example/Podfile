@@ -1,0 +1,5 @@
+use_frameworks! :linkage => :static
+platform :ios, '10.0'
+target 'BaseKit_Example' do
+  pod 'BaseKit', :path => '../'
+end

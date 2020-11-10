@@ -41,7 +41,6 @@ public class CTToast {
         }
     }
     
-    
     /// 显示指示器
     /// - Parameters:
     ///   - baseView: 父view
@@ -55,7 +54,6 @@ public class CTToast {
         }
     }
     
-    
     /// 显示toast，指定位置
     /// - Parameters:
     ///   - baseView: 父view
@@ -68,7 +66,6 @@ public class CTToast {
     public class func ct_showPositionToast(baseView: UIView?, message: String?, duration: TimeInterval = 3.0, position: CTToastPosition = .center, title: String?, image: UIImage?, completion: ((Bool) -> Void)?) {
         (baseView ?? self.ct_defaultView())?.makeToast(message, duration: duration, position: position.ct_swiftToastPostion(), title: title, image: image, style: ToastStyle(), completion: completion)
     }
-    
     
     /// 显示toast，指定坐标
     /// - Parameters:
@@ -93,10 +90,14 @@ public class CTToast {
     /// 隐藏指示器
     /// - Parameters:
     ///   - baseView: 指示器父view
+    ///   - preventUserAction: 是否阻止用户交互，默认为false
     ///   - delay: 延时时间
-    public class func ct_hideIndicator(baseView: UIView?, delay: TimeInterval = 0) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-            (baseView ?? self.ct_defaultView())?.hideToastActivity()
+    public class func ct_hideIndicator(baseView: UIView?, delay: TimeInterval = 0, preventUserAction: Bool = false) {
+        if let view = (baseView ?? self.ct_defaultView()) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+                view.isUserInteractionEnabled = !preventUserAction
+                view.hideToastActivity()
+            }
         }
     }
     

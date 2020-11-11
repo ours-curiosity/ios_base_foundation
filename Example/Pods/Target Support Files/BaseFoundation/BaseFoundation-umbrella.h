@@ -10,7 +10,9 @@
 #endif
 #endif
 
+#import "UIStatusBarManager+Tap.h"
+#import "UIStatusBarManager+Tap.h"
 
-FOUNDATION_EXPORT double SnapKitVersionNumber;
-FOUNDATION_EXPORT const unsigned char SnapKitVersionString[];
+FOUNDATION_EXPORT double BaseFoundationVersionNumber;
+FOUNDATION_EXPORT const unsigned char BaseFoundationVersionString[];
 

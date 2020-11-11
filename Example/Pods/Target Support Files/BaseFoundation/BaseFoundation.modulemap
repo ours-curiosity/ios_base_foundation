@@ -1,0 +1,6 @@
+framework module BaseFoundation {
+  umbrella header "BaseFoundation-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,6 +1,0 @@
-framework module iOSBaseFoundation {
-  umbrella header "iOSBaseFoundation-umbrella.h"
-
-  export *
-  module * { export * }
-}

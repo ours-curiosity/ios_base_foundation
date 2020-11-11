@@ -8,11 +8,11 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BaseFoundation'
-  s.version          = '0.6.2'
+  s.version          = '0.6.0'
   s.summary          = 'iOS 基础加速库.'
 
   s.description      = <<-DESC
-  你可以使用base_foundation来构建新的app. ios 10.0, swift 5
+  你可以使用baseBaseFoundation来快速构建新的app. ios 10.0, swift 5
                        DESC
 
   s.homepage         = 'https://github.com/ours-curiosity/ios_base_foundation'
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.swift_version = "5.0"
 
-  s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
+#  s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
   
   s.source_files = 'ios_base_foundation/Classes/**/*'
   

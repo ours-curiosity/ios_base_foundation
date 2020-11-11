@@ -1,11 +1,11 @@
 PODS:
-  - BaseFoundation (0.6.2):
-    - BaseFoundation/Core (= 0.6.2)
-    - BaseFoundation/Extension (= 0.6.2)
-    - BaseFoundation/UIKit (= 0.6.2)
-  - BaseFoundation/Core (0.6.2)
-  - BaseFoundation/Extension (0.6.2)
-  - BaseFoundation/UIKit (0.6.2)
+  - BaseFoundation (0.6.0):
+    - BaseFoundation/Core (= 0.6.0)
+    - BaseFoundation/Extension (= 0.6.0)
+    - BaseFoundation/UIKit (= 0.6.0)
+  - BaseFoundation/Core (0.6.0)
+  - BaseFoundation/Extension (0.6.0)
+  - BaseFoundation/UIKit (0.6.0)
 
 DEPENDENCIES:
   - BaseFoundation (from `../`)
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BaseFoundation: 45207646fe4f0ef21709064b3e8d39479f6b52c4
+  BaseFoundation: 9cae68399a893cae20c5b883893758c035c2c554
 
 PODFILE CHECKSUM: 179301747a1e28abb31624eb06d528f01010fb16
 

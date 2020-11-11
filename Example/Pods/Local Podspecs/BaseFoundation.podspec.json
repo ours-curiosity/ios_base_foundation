@@ -1,8 +1,8 @@
 {
   "name": "BaseFoundation",
-  "version": "0.6.2",
+  "version": "0.6.0",
   "summary": "iOS 基础加速库.",
-  "description": "你可以使用base_foundation来构建新的app. ios 10.0, swift 5",
+  "description": "你可以使用baseBaseFoundation来快速构建新的app. ios 10.0, swift 5",
   "homepage": "https://github.com/ours-curiosity/ios_base_foundation",
   "license": {
     "type": "MIT",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/ours-curiosity/ios_base_foundation.git",
-    "tag": "0.6.2"
+    "tag": "0.6.0"
   },
   "social_media_url": "https://ours-curiosity.github.io/",
   "requires_arc": true,
@@ -21,11 +21,6 @@
     "ios": "10.0"
   },
   "swift_versions": "5.0",
-  "frameworks": [
-    "UIKit",
-    "Foundation",
-    "CoreGraphics"
-  ],
   "source_files": "ios_base_foundation/Classes/**/*",
   "subspecs": [
     {

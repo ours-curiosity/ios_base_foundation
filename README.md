@@ -54,3 +54,6 @@ pod 'BaseFoundation/UIKit'
 * 2.发现库版本号与github上最新版本不一致时请`pod update`。
 * 3.发现问题请提交issue。
 
+## License
+
+BaseUIWidget is available under the MIT license. See the LICENSE file for more info.

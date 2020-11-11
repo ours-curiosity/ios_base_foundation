@@ -1,6 +1,6 @@
 use_frameworks! :linkage => :static
 platform :ios, '10.0'
 target 'ios_base_foundation_Example' do
-  pod 'iOSBaseFoundation', :path => '../'
+  pod 'BaseFoundation', :path => '../'
 
 end

@@ -11,6 +11,7 @@
 #endif
 
 #import "UIStatusBarManager+Tap.h"
+#import "UIStatusBarManager+Tap.h"
 
 FOUNDATION_EXPORT double iOSBaseFoundationVersionNumber;
 FOUNDATION_EXPORT const unsigned char iOSBaseFoundationVersionString[];

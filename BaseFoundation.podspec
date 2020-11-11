@@ -7,8 +7,8 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'iOSBaseFoundation'
-  s.version          = '0.5.0'
+  s.name             = 'BaseFoundation'
+  s.version          = '0.6.2'
   s.summary          = 'iOS 基础加速库.'
 
   s.description      = <<-DESC
@@ -19,9 +19,9 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'ours-curiosity' => 'ours.curiosity@gmail.com' }
-  s.source           = { :git => 'https://github.com/ours-curiosity/ios_base_foundation.git', :tag => '0.5.0' }
+  s.source           = { :git => 'https://github.com/ours-curiosity/ios_base_foundation.git', :tag => s.version.to_s }
   s.social_media_url = 'https://ours-curiosity.github.io/'
-
+  s.requires_arc     = true
   s.ios.deployment_target = '10.0'
   s.swift_version = "5.0"
 
@@ -31,21 +31,17 @@ Pod::Spec.new do |s|
   
   # Core
   s.subspec 'Core' do |sp|
-    sp.source_files  = 'ios_base_foundation/Core/*'
+    sp.source_files  = 'ios_base_foundation/Classes/Core/*'
   end
   
   # Extensions
   s.subspec 'Extension' do |sp|
-    sp.source_files  = 'ios_base_foundation/Core/*', 'ios_base_foundation/Extension/**/*'
+    sp.source_files  = 'ios_base_foundation/Classes/Core/*', 'ios_base_foundation/Classes/Extension/**/*'
   end
   
   # UIKit Extensions
   s.subspec 'UIKit' do |sp|
-    sp.source_files  = 'ios_base_foundation/Core/*', 'ios_base_foundation/Extension/UIKit/*'
+    sp.source_files  = 'ios_base_foundation/Classes/Core/*', 'ios_base_foundation/Classes/Extension/UIKit/*'
   end
-  
-  #依赖第三方库
-  s.dependency 'SnapKit', '= 5.0.1'
-  s.dependency 'Toast-Swift', '= 5.0.1'
 
 end

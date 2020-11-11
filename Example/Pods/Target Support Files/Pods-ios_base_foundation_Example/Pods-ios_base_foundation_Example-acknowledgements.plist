@@ -278,7 +278,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 			<key>License</key>
 			<string>MIT</string>
 			<key>Title</key>
-			<string>ios_base_foundation</string>
+			<string>iOSBaseFoundation</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

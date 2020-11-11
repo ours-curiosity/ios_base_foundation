@@ -12,7 +12,7 @@
 - (void)handleTapAction:(id)callback {
     // 仅当 iOS 13 以上系统，才去监听状态栏的点击事件，iOS 13 之前的，则在 appdelegate 中的 touchesBegan 捕获
     if (@available(iOS 13.0, *)) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"com.building6.notification.statusBarTappedNotification"
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"com.iOSBaseFoundation.notification.statusBarTappedNotification"
                                                             object:nil];
     }
 }

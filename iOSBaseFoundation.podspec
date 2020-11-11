@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'ios_base_foundation'
+  s.name             = 'iOSBaseFoundation'
   s.version          = '0.5.0'
   s.summary          = 'iOS 基础加速库.'
 
@@ -25,10 +25,25 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
   s.swift_version = "5.0"
 
+  s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
+  
   s.source_files = 'ios_base_foundation/Classes/**/*'
   
-  s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
-
+  # Core
+  s.subspec 'Core' do |sp|
+    sp.source_files  = 'ios_base_foundation/Core/*'
+  end
+  
+  # Extensions
+  s.subspec 'Extension' do |sp|
+    sp.source_files  = 'ios_base_foundation/Core/*', 'ios_base_foundation/Extension/**/*'
+  end
+  
+  # UIKit Extensions
+  s.subspec 'UIKit' do |sp|
+    sp.source_files  = 'ios_base_foundation/Core/*', 'ios_base_foundation/Extension/UIKit/*'
+  end
+  
   #依赖第三方库
   s.dependency 'SnapKit', '= 5.0.1'
   s.dependency 'Toast-Swift', '= 5.0.1'

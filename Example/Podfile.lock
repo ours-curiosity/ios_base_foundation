@@ -1,12 +1,24 @@
 PODS:
-  - ios_base_foundation (0.5.0):
+  - iOSBaseFoundation (0.5.0):
+    - iOSBaseFoundation/Core (= 0.5.0)
+    - iOSBaseFoundation/Extension (= 0.5.0)
+    - iOSBaseFoundation/UIKit (= 0.5.0)
+    - SnapKit (= 5.0.1)
+    - Toast-Swift (= 5.0.1)
+  - iOSBaseFoundation/Core (0.5.0):
+    - SnapKit (= 5.0.1)
+    - Toast-Swift (= 5.0.1)
+  - iOSBaseFoundation/Extension (0.5.0):
+    - SnapKit (= 5.0.1)
+    - Toast-Swift (= 5.0.1)
+  - iOSBaseFoundation/UIKit (0.5.0):
     - SnapKit (= 5.0.1)
     - Toast-Swift (= 5.0.1)
   - SnapKit (5.0.1)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
-  - ios_base_foundation (from `../`)
+  - iOSBaseFoundation (from `../`)
 
 SPEC REPOS:
   trunk:
@@ -14,14 +26,14 @@ SPEC REPOS:
     - Toast-Swift
 
 EXTERNAL SOURCES:
-  ios_base_foundation:
+  iOSBaseFoundation:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ios_base_foundation: 57f30b0e0c3c3289cdd28a110763ab076b2b1536
+  iOSBaseFoundation: b5eccb0e24ee05dbdab35c1c0e4ead4dc32093e1
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 64fee78ea6d6ce14e94fa421431050808201750e
+PODFILE CHECKSUM: df5b69f742690b923ea508af7f6f589da93a52f0
 
 COCOAPODS: 1.10.0

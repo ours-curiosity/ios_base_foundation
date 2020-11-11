@@ -12,6 +12,6 @@
 
 #import "UIStatusBarManager+Tap.h"
 
-FOUNDATION_EXPORT double ios_base_foundationVersionNumber;
-FOUNDATION_EXPORT const unsigned char ios_base_foundationVersionString[];
+FOUNDATION_EXPORT double iOSBaseFoundationVersionNumber;
+FOUNDATION_EXPORT const unsigned char iOSBaseFoundationVersionString[];
 

@@ -8,7 +8,7 @@
 import Foundation
 
 /// 尺寸适配相关
-class UIFit {
+public class UIFit {
     
     /// 屏幕宽度
     public static let width = UIScreen.main.bounds.width
@@ -76,19 +76,19 @@ class UIFit {
 }
 
 // MARK: - 对常用数字扩展适配属性
-extension CGFloat {
+public extension CGFloat {
     var scale: CGFloat {
         return UIFit.scale(self)
     }
 }
 
-extension Int {
+public extension Int {
     var scale: CGFloat {
         return UIFit.scale(CGFloat(self))
     }
 }
 
-extension Double {
+public extension Double {
     var scale: CGFloat {
         return UIFit.scale(CGFloat(self))
     }

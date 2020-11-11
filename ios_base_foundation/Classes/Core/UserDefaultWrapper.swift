@@ -8,7 +8,7 @@
 
 import Foundation
 @propertyWrapper
-struct UserDefault<T> {
+public struct UserDefault<T> {
     let key: String
     let defaultValue: T
 
@@ -16,7 +16,7 @@ struct UserDefault<T> {
         self.key = key
         self.defaultValue = defaultValue
     }
-    var wrappedValue: T {
+    public var wrappedValue: T {
         get {
             return UserDefaults.standard.object(forKey: key) as? T ?? defaultValue
         }

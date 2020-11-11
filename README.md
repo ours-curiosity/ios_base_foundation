@@ -21,26 +21,36 @@
 
 ## 使用：
 
+> 1. 首先添加私有库`repo`到`pod`
 ```
-pod 'BaseFoundation', :git => 'https://github.com:ours-curiosity/ios_base_foundation.git' 
+pod repo add CTSpecs https://github.com/ours-curiosity/CTSpecs.git
+```
+> 2. 在`Podfile` 中添加私有库的源`source`
+```
+source 'https://github.com/ours-curiosity/CTSpecs'
+```
+> 3. 添加以下语句到`Podfile`文件
+```
+pod 'BaseFoundation' 
 ```
 
 ###  只想导入最基础的功能(Core)：
 ```
-pod 'BaseFoundation/Core', :git => 'https://github.com:ours-curiosity/ios_base_foundation.git' 
+pod 'BaseFoundation/Core'
 ```
 
 ###  只导入所有扩展(Extensions)：
 ```
-pod 'BaseFoundation/Extension', :git => 'https://github.com:ours-curiosity/ios_base_foundation.git' 
+pod 'BaseFoundation/Extension' 
 ```
 
 ###  只导入UIKit相关扩展(UIKit)：
 ```
-pod 'BaseFoundation/UIKit', :git => 'https://github.com:ours-curiosity/ios_base_foundation.git' 
+pod 'BaseFoundation/UIKit' 
 ```
 
 ## 备注：
 * 1.无论导入全部还是部分功能，都会导入`Core`相关部分。
-* 2.发现问题请提交issue。
+* 2.发现库版本号与github上最新版本不一致时请`pod update`。
+* 3.发现问题请提交issue。
 

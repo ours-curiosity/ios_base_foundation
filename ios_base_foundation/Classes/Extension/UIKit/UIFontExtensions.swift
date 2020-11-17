@@ -5,6 +5,15 @@ import UIKit
 
 // MARK: - Properties
 
+/// 字体类型
+public enum FontType: String {
+    case regular    = "PingFang-SC-Regular"         // 平方-常规
+    case semibold   = "PingFang-SC-Semibold"        // 平方-中黑
+    case medium     = "PingFang-SC-Medium"          // 平方-中粗
+    case arial      = "Arial-ItalicMT"              // 斜体
+    case arialBold  = "Arial-BoldItalicMT"          // 斜体加粗
+}
+
 public extension UIFont {
     /// SwifterSwift: Font as bold font
     var bold: UIFont {
@@ -29,6 +38,13 @@ public extension UIFont {
         let attributes = [UIFontDescriptor.AttributeName.featureSettings: settings]
         let newDescriptor = fontDescriptor.addingAttributes(attributes)
         return UIFont(descriptor: newDescriptor, size: 0)
+    }
+}
+
+public extension UIFont {
+    
+    convenience init(_ type: FontType = .regular, _ fontSize: CGFloat = 17) {
+        self.init(name: type.rawValue, size: fontSize)!
     }
 }
 

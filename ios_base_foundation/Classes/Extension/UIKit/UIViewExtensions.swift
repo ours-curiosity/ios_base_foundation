@@ -77,6 +77,24 @@ public extension UIView {
         }
     }
 
+    var origin: CGPoint {
+        get {
+            return frame.origin
+        }
+        set {
+            frame.origin = newValue
+        }
+    }
+    
+    var size: CGSize {
+        get {
+            return frame.size
+        }
+        set {
+            frame.size = newValue
+        }
+    }
+    
     var screenshot: UIImage? {
         UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, 0)
         defer {

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BaseFoundation'
-  s.version          = '0.6.1'
+  s.version          = '0.6.2'
   s.summary          = 'iOS 基础加速库.'
 
   s.description      = <<-DESC
@@ -24,8 +24,6 @@ Pod::Spec.new do |s|
   s.requires_arc     = true
   s.ios.deployment_target = '10.0'
   s.swift_version = "5.0"
-
-#  s.frameworks = 'UIKit', 'Foundation', 'CoreGraphics'
   
   s.source_files = 'ios_base_foundation/Classes/**/*'
   

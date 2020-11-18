@@ -31,7 +31,7 @@ public extension String {
         return Array(self)
     }
     
-
+    
     
     /// 是否包含emoji
     ///
@@ -67,7 +67,7 @@ public extension String {
         default: return false
         }
     }
-
+    
     
     /// 是否包含字母
     ///
@@ -111,7 +111,7 @@ public extension String {
         return comps.joined(separator: "").count == 0 && hasLetters && hasNumbers
     }
     
-
+    
     /// 是否是有效的电子邮件格式
     ///
     /// - Note: Note that this property does not validate the email address against an email server. It merely attempts to determine whether its format is suitable for an email address.
@@ -124,7 +124,7 @@ public extension String {
             "^(?:[\\p{L}0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[\\p{L}0-9!#$%\\&'*+/=?\\^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[\\p{L}0-9](?:[a-z0-9-]*[\\p{L}0-9])?\\.)+[\\p{L}0-9](?:[\\p{L}0-9-]*[\\p{L}0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[\\p{L}0-9-]*[\\p{L}0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])$"
         return range(of: regex, options: .regularExpression, range: nil, locale: nil) != nil
     }
-
+    
     ///是否是有效的URL
     ///
     ///		"https://google.com".isValidUrl -> true
@@ -140,8 +140,8 @@ public extension String {
     var isValidFileUrl: Bool {
         return URL(string: self)?.isFileURL ?? false
     }
-
-
+    
+    
     /// 是否只包含数字
     ///
     ///     "123".isDigits -> true
@@ -151,8 +151,8 @@ public extension String {
     var isDigits: Bool {
         return CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: self))
     }
-   
-   
+    
+    
     /// 转int
     var int: Int? {
         return Int(self)
@@ -194,7 +194,6 @@ public extension String {
               let upperIndex = index(startIndex, offsetBy: range.upperBound, limitedBy: endIndex) else {
             return nil
         }
-        
         return String(self[lowerIndex..<upperIndex])
     }
     
@@ -267,7 +266,6 @@ public extension String {
     func countOfChars() -> Int {
         var count = 0
         guard self.count > 0 else { return 0}
-        
         for i in 0...self.count - 1 {
             let c: unichar = (self as NSString).character(at: i)
             if (c >= 0x4E00) {
@@ -283,10 +281,7 @@ public extension String {
     /// - Parameter index: 指定截取的位置
     /// - Returns: 截取后的字符串
     func subString(to index: Int) -> String {
-        if self.count == 0 {
-            return ""
-        }
-        
+        if self.count == 0 { return "" }
         var number = 0
         var strings: [String] = []
         for c in self {

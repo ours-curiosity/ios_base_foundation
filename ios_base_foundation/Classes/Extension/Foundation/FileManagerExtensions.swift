@@ -16,11 +16,11 @@ public extension FileManager {
         readingOptions: JSONSerialization.ReadingOptions = .allowFragments) throws -> [String: Any]? {
         let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
         let json = try JSONSerialization.jsonObject(with: data, options: readingOptions)
-
+        
         return json as? [String: Any]
     }
-
-
+    
+    
     /// 创建一个保存临时文件的唯一目录
     ///
     ///     let tempDirectory = try fileManager.createTemporaryDirectory()

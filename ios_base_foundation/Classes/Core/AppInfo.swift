@@ -60,13 +60,10 @@ public struct AppInfo {
     /// plist 详情
     /// - Returns: 基本信息的字典
     public static func plistDict() -> [String: Any]! {
-        
         var infoDict: [String: Any]? = Bundle.main.infoDictionary
-        
         if infoDict == nil || infoDict!.count <= 0 {
             infoDict = Bundle.main.localizedInfoDictionary
         }
-        
         if infoDict == nil || infoDict!.count <= 0 {
             let path = Bundle.main.path(forResource: "Info", ofType: "plist") ?? ""
             infoDict = NSDictionary.init(contentsOfFile: path) as? [String : Any]

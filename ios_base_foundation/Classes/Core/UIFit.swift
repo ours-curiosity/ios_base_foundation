@@ -46,7 +46,7 @@ public class UIFit {
     public class var navBarHeight: CGFloat {
         return 44.0
     }
-
+    
     /// 导航栏和状态栏的总高度
     public class var navWithStatusBarHeight : CGFloat {
         let heigth = statusBarHeight + navBarHeight

@@ -5,14 +5,12 @@ public extension URL {
     /// 查参数
     var queryParameters: [String: String]? {
         guard let components = URLComponents(url: self, resolvingAgainstBaseURL: false),
-            let queryItems = components.queryItems else { return nil }
-
+              let queryItems = components.queryItems else { return nil }
+        
         var items: [String: String] = [:]
-
         for queryItem in queryItems {
             items[queryItem.name] = queryItem.value
         }
-
         return items
     }
 }
@@ -45,7 +43,7 @@ public extension URL {
         let imageGenerator = AVAssetImageGenerator(asset: AVAsset(url: self))
         let time = CMTimeMakeWithSeconds(time, preferredTimescale: 1)
         var actualTime = CMTimeMake(value: 0, timescale: 0)
-
+        
         guard let cgImage = try? imageGenerator.copyCGImage(at: time, actualTime: &actualTime) else {
             return nil
         }

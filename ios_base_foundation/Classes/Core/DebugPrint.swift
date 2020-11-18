@@ -16,11 +16,11 @@ import Foundation
 ///   - line: 第几行，默认值：#line
 ///   - method: 函数名，默认值：#function
 public func DebugPrint(_ items: Any...,
-    separator: String = " ",
-    terminator: String = "\n",
-    file: String = #file,
-    line: Int = #line,
-    method: String = #function)
+                       separator: String = " ",
+                       terminator: String = "\n",
+                       file: String = #file,
+                       line: Int = #line,
+                       method: String = #function)
 {
     #if DEBUG
     //如果不怕打印结果有大括号[4, "abc", [1, 2, 3]]，可以直接一句话
@@ -30,7 +30,7 @@ public func DebugPrint(_ items: Any...,
     let j = items.count
     for a in items {
         i += 1
-        print("------>",a, terminator:i == j ? terminator: separator)
+        print("--->>>",a, terminator:i == j ? terminator: separator)
     }
     #endif
 }

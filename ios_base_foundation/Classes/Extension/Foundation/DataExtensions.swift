@@ -8,6 +8,7 @@ public extension Data {
         return [UInt8](self)
     }
 }
+
 public extension Data {
     /// 转string
     func string(encoding: String.Encoding) -> String? {
@@ -19,6 +20,7 @@ public extension Data {
         return try JSONSerialization.jsonObject(with: self, options: options)
     }
 }
+
 public extension Data {
     
     /// json 二进制 转模型

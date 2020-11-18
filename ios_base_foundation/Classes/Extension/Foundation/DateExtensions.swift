@@ -11,14 +11,14 @@ public extension Date {
     enum DayNameStyle {
         /// SwifterSwift: 3 letter day abbreviation of day name.
         case threeLetters
-
+        
         /// SwifterSwift: 1 letter day abbreviation of day name.
         case oneLetter
-
+        
         /// SwifterSwift: Full day name.
         case full
     }
-
+    
     /// 月格式
     ///
     /// - threeLetters: 3 letter month abbreviation of month name.
@@ -27,10 +27,10 @@ public extension Date {
     enum MonthNameStyle {
         /// SwifterSwift: 3 letter month abbreviation of month name.
         case threeLetters
-
+        
         /// SwifterSwift: 1 letter month abbreviation of month name.
         case oneLetter
-
+        
         /// SwifterSwift: Full month name.
         case full
     }
@@ -44,7 +44,7 @@ public extension Date {
         // Workaround to segfault on corelibs foundation https://bugs.swift.org/browse/SR-10147
         return Calendar(identifier: Calendar.current.identifier)
     }
-
+    
     /// 本年第几周
     ///
     ///		Date().weekOfYear -> 2 // second week in the year.
@@ -52,7 +52,7 @@ public extension Date {
     var weekOfYear: Int {
         return calendar.component(.weekOfYear, from: self)
     }
-
+    
     /// 本月第几周
     ///
     ///		Date().weekOfMonth -> 3 // date is in third week of the month.
@@ -87,7 +87,7 @@ public extension Date {
             }
         }
     }
-
+    
     /// 月
     ///
     /// 	Date().month -> 1
@@ -102,7 +102,7 @@ public extension Date {
         set {
             let allowedRange = calendar.range(of: .month, in: .year, for: self)!
             guard allowedRange.contains(newValue) else { return }
-
+            
             let currentMonth = calendar.component(.month, from: self)
             let monthsToAdd = newValue - currentMonth
             if let date = calendar.date(byAdding: .month, value: monthsToAdd, to: self) {
@@ -110,7 +110,7 @@ public extension Date {
             }
         }
     }
-
+    
     /// 日
     ///
     /// 	Date().day -> 12
@@ -125,7 +125,7 @@ public extension Date {
         set {
             let allowedRange = calendar.range(of: .day, in: .month, for: self)!
             guard allowedRange.contains(newValue) else { return }
-
+            
             let currentDay = calendar.component(.day, from: self)
             let daysToAdd = newValue - currentDay
             if let date = calendar.date(byAdding: .day, value: daysToAdd, to: self) {
@@ -133,7 +133,7 @@ public extension Date {
             }
         }
     }
-
+    
     /// 周
     ///
     /// 	Date().weekday -> 5 // fifth day in the current week.
@@ -141,7 +141,7 @@ public extension Date {
     var weekday: Int {
         return calendar.component(.weekday, from: self)
     }
-
+    
     /// 小时
     ///
     /// 	Date().hour -> 17 // 5 pm
@@ -156,7 +156,7 @@ public extension Date {
         set {
             let allowedRange = calendar.range(of: .hour, in: .day, for: self)!
             guard allowedRange.contains(newValue) else { return }
-
+            
             let currentHour = calendar.component(.hour, from: self)
             let hoursToAdd = newValue - currentHour
             if let date = calendar.date(byAdding: .hour, value: hoursToAdd, to: self) {
@@ -164,7 +164,7 @@ public extension Date {
             }
         }
     }
-
+    
     /// 分钟
     ///
     /// 	Date().minute -> 39
@@ -179,7 +179,7 @@ public extension Date {
         set {
             let allowedRange = calendar.range(of: .minute, in: .hour, for: self)!
             guard allowedRange.contains(newValue) else { return }
-
+            
             let currentMinutes = calendar.component(.minute, from: self)
             let minutesToAdd = newValue - currentMinutes
             if let date = calendar.date(byAdding: .minute, value: minutesToAdd, to: self) {
@@ -187,7 +187,7 @@ public extension Date {
             }
         }
     }
-
+    
     /// 秒
     ///
     /// 	Date().second -> 55
@@ -202,7 +202,7 @@ public extension Date {
         set {
             let allowedRange = calendar.range(of: .second, in: .minute, for: self)!
             guard allowedRange.contains(newValue) else { return }
-
+            
             let currentSeconds = calendar.component(.second, from: self)
             let secondsToAdd = newValue - currentSeconds
             if let date = calendar.date(byAdding: .second, value: secondsToAdd, to: self) {
@@ -210,7 +210,7 @@ public extension Date {
             }
         }
     }
-
+    
     /// 纳秒
     ///
     /// 	Date().nanosecond -> 981379985
@@ -230,16 +230,16 @@ public extension Date {
             let allowedRange = calendar.range(of: .nanosecond, in: .second, for: self)!
             #endif
             guard allowedRange.contains(newValue) else { return }
-
+            
             let currentNanoseconds = calendar.component(.nanosecond, from: self)
             let nanosecondsToAdd = newValue - currentNanoseconds
-
+            
             if let date = calendar.date(byAdding: .nanosecond, value: nanosecondsToAdd, to: self) {
                 self = date
             }
         }
     }
-
+    
     /// 毫秒
     ///
     /// 	Date().millisecond -> 68
@@ -260,13 +260,13 @@ public extension Date {
             let allowedRange = calendar.range(of: .nanosecond, in: .second, for: self)!
             #endif
             guard allowedRange.contains(nanoSeconds) else { return }
-
+            
             if let date = calendar.date(bySetting: .nanosecond, value: nanoSeconds, of: self) {
                 self = date
             }
         }
     }
-
+    
     /// 是不是未来
     ///
     /// 	Date(timeInterval: 100, since: Date()).isInFuture -> true
@@ -274,7 +274,7 @@ public extension Date {
     var isInFuture: Bool {
         return self > Date()
     }
-
+    
     /// 是不是过去
     ///
     /// 	Date(timeInterval: -100, since: Date()).isInPast -> true
@@ -282,7 +282,7 @@ public extension Date {
     var isInPast: Bool {
         return self < Date()
     }
-
+    
     /// 是不是今天
     ///
     /// 	Date().isInToday -> true
@@ -290,7 +290,7 @@ public extension Date {
     var isInToday: Bool {
         return calendar.isDateInToday(self)
     }
-
+    
     /// 是不是昨天
     ///
     /// 	Date().isInYesterday -> false
@@ -298,7 +298,7 @@ public extension Date {
     var isInYesterday: Bool {
         return calendar.isDateInYesterday(self)
     }
-
+    
     /// 是不是明天
     ///
     /// 	Date().isInTomorrow -> false
@@ -306,32 +306,32 @@ public extension Date {
     var isInTomorrow: Bool {
         return calendar.isDateInTomorrow(self)
     }
-
+    
     /// 是不是在周末
     var isInWeekend: Bool {
         return calendar.isDateInWeekend(self)
     }
-
+    
     /// 是不是工作日
     var isWorkday: Bool {
         return !calendar.isDateInWeekend(self)
     }
-
+    
     /// 是不是当前周
     var isInCurrentWeek: Bool {
         return calendar.isDate(self, equalTo: Date(), toGranularity: .weekOfYear)
     }
-
+    
     /// 是不是当前月
     var isInCurrentMonth: Bool {
         return calendar.isDate(self, equalTo: Date(), toGranularity: .month)
     }
-
+    
     /// 是不是在今年
     var isInCurrentYear: Bool {
         return calendar.isDate(self, equalTo: Date(), toGranularity: .year)
     }
-
+    
     /// iso8601String
     ///
     /// 	Date().iso8601String -> "2017-01-12T14:51:29.574Z"
@@ -342,11 +342,11 @@ public extension Date {
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-
+        
         return dateFormatter.string(from: self).appending("Z")
     }
-
-
+    
+    
     /// 昨天
     ///
     ///     let date = Date() // "Oct 3, 2018, 10:57:11"
@@ -355,7 +355,7 @@ public extension Date {
     var yesterday: Date {
         return calendar.date(byAdding: .day, value: -1, to: self) ?? Date()
     }
-
+    
     /// 明天
     ///
     ///     let date = Date() // "Oct 3, 2018, 10:57:11"
@@ -364,7 +364,7 @@ public extension Date {
     var tomorrow: Date {
         return calendar.date(byAdding: .day, value: 1, to: self) ?? Date()
     }
-
+    
     /// 时间戳
     ///
     ///		Date().unixTimestamp -> 1484233862.826291
@@ -377,7 +377,7 @@ public extension Date {
 // MARK: - Methods
 
 public extension Date {
-   
+    
     /// 日期转字符串.
     ///
     ///     Date().string(withFormat: "dd/MM/yyyy") -> "1/12/17"
@@ -391,7 +391,7 @@ public extension Date {
         dateFormatter.dateFormat = format
         return dateFormatter.string(from: self)
     }
-
+    
     /// 两个日期之间的秒数
     ///
     /// - Parameter date: date to compate self to.
@@ -399,7 +399,7 @@ public extension Date {
     func secondsSince(_ date: Date) -> Double {
         return timeIntervalSince(date)
     }
-
+    
     /// 两个日期之间的分钟数
     ///
     /// - Parameter date: date to compate self to.
@@ -407,7 +407,7 @@ public extension Date {
     func minutesSince(_ date: Date) -> Double {
         return timeIntervalSince(date) / 60
     }
-
+    
     /// 两个日期之间的小时数
     ///
     /// - Parameter date: date to compate self to.
@@ -415,7 +415,7 @@ public extension Date {
     func hoursSince(_ date: Date) -> Double {
         return timeIntervalSince(date) / 3600
     }
-
+    
     /// 两个日期之间的天数
     ///
     /// - Parameter date: date to compate self to.
@@ -423,7 +423,7 @@ public extension Date {
     func daysSince(_ date: Date) -> Double {
         return timeIntervalSince(date) / (3600 * 24)
     }
-
+    
     /// 是否在两个日期之间
     ///
     /// - Parameters:
@@ -437,7 +437,7 @@ public extension Date {
         }
         return startDate.compare(self).rawValue * compare(endDate).rawValue > 0
     }
-
+    
 }
 
 // MARK: - Initializers
@@ -477,11 +477,11 @@ public extension Date {
         components.minute = minute
         components.second = second
         components.nanosecond = nanosecond
-
+        
         guard let date = calendar?.date(from: components) else { return nil }
         self = date
     }
-
+    
     /// 日期初始化 ISO8601 string.  let date = Date(iso8601String: "2017-01-12T16:48:00.959Z") // "Jan 12, 2017, 7:48 PM"
     /// - Parameter iso8601String: ISO8601 string of format (yyyy-MM-dd'T'HH:mm:ss.SSSZ).
     init?(iso8601String: String) {
@@ -493,13 +493,13 @@ public extension Date {
         guard let date = dateFormatter.date(from: iso8601String) else { return nil }
         self = date
     }
-
+    
     /// 日期初始化 UNIX timestamp.  let date = Date(unixTimestamp: 1484239783.922743) // "Jan 12, 2017, 7:49 PM"
     /// - Parameter unixTimestamp: UNIX timestamp.
     init(unixTimestamp: Double) {
         self.init(timeIntervalSince1970: unixTimestamp)
     }
-
+    
     /// 日期初始化 Int literal Date(integerLiteral: 2017_12_25) // "2017-12-25 00:00:00 +0000"
     ///
     /// - Parameter value: Int value, e.g. 20171225, or 2017_12_25 etc.

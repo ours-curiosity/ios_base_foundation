@@ -13,7 +13,7 @@ public struct AppDeveice {
     /// 设备信息
     public static var info: String {
         let infoStr =
-        """
+            """
         制造商: \(manufacturer)
         操作系统: \(systemName)
         操作系统版本: \(osVersion)
@@ -75,21 +75,17 @@ public struct AppDeveice {
                 DebugPrint("获取磁盘的总大小失败。。。")
             }
         }
-        
         return totalFreeSpace
     }
     
     
     /// 设备型号
     public static var deviceModel: String {
-        
         var systemInfo = utsname()
         uname(&systemInfo)
-        
         let identifier = withUnsafePointer(to: &systemInfo.machine.0) { ptr in
             return String(cString: ptr)
         }
-        
         switch identifier {
         
         case "i386", "x86_64": return "iPhone Simulator"
@@ -154,7 +150,7 @@ public struct AppDeveice {
         case "iPad7,12": return "iPad 7th"
         case "iPad11,6": return "iPad 8th"
         case "iPad11,7": return "iPad 8th"
-
+            
         // iPad Air
         case "iPad4,1": return "iPad Air"
         case "iPad4,2": return "iPad Air"
@@ -202,7 +198,7 @@ public struct AppDeveice {
         case "iPad5,2": return "iPad Mini 4"
         case "iPad11,1": return "iPad Mini 5"
         case "iPad11,2": return "iPad Mini 5"
-        
+            
         case "iPod1,1": return "iPod Touch"
         case "iPod2,1": return "iPod Touch 2nd"
         case "iPod3,1": return "iPod Touch 3rd"

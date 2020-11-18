@@ -145,7 +145,6 @@ public extension UIViewController {
     /// 获得当前的顶层控制器 by walker
     /// - Returns: 顶层控制器
     class func getTopViewController() -> UIViewController? {
-        
         var window = UIApplication.shared.keyWindow
         //是否为当前显示的window
         if window?.windowLevel != UIWindow.Level.normal{
@@ -165,11 +164,9 @@ public extension UIViewController {
     /// - Parameter viewController: 指定的控制器
     /// - Returns: 指定控制器的顶层控制器
     class func getTopViewController(_ viewController: UIViewController?) -> UIViewController? {
-        
         guard let currentVC = viewController else {
             return nil
         }
-        
         if let nav = currentVC as? UINavigationController {
             // 控制器是nav
             return getTopViewController(nav.visibleViewController)
@@ -190,12 +187,11 @@ public extension UIViewController {
         return self.getTopViewController()
     }
     
-    /// 是否是被模态出的控制器 by walker
+    /// 是否是被Push出的控制器 by walker
     var isPushed: Bool {
         if self.navigationController == nil {
             return false
         }
-        
         let VCs = self.navigationController?.viewControllers
         if VCs != nil && VCs!.count >= 1 {
             if VCs?.last == self && VCs?.first != self {
@@ -207,24 +203,20 @@ public extension UIViewController {
     
     /// 找到当前控制器的 navigationbar by walker
     var currentNavigationBar: UINavigationBar? {
-        
         var bar : UINavigationBar?
-        
         if self.isKind(of: UINavigationController.self) {
             let navController = self as! UINavigationController
             bar = navController.navigationBar
         } else {
             bar = self.navigationController?.navigationBar
         }
-        
         return bar
     }
-
+    
     /// 设置导航栏颜色 by walker
     /// - Parameter color: 颜色
     func setTitleColor(_ color: UIColor?) {
         guard let newColor = color else { return }
-        
         var attributes = self.currentNavigationBar?.titleTextAttributes
         if attributes == nil && color != nil {
             attributes = [NSAttributedString.Key.foregroundColor : newColor]
@@ -238,7 +230,6 @@ public extension UIViewController {
     /// - Parameter font: 字体
     func setTitleFont(_ font: UIFont?) {
         guard let newFont = font else { return }
-        
         var attributes = self.currentNavigationBar?.titleTextAttributes
         if attributes == nil {
             attributes = [NSAttributedString.Key.font : newFont]
@@ -247,5 +238,58 @@ public extension UIViewController {
         }
         self.currentNavigationBar?.titleTextAttributes = attributes
     }
+}
+
+// 控制器切换快捷方法
+extension UIViewController {
     
+    /// 展示一个控制器，优先push
+    /// - Parameters:
+    ///   - viewController: 需要展示的控制器
+    ///   - animated: 是否需要动画
+    func pushOrPresentViewController(_ viewController: UIViewController, animated: Bool = true) {
+        if let nav = self.navigationController {
+            nav.pushViewController(viewController, animated: animated)
+        } else {
+            present(viewController, animated: animated, completion: nil)
+        }
+    }
+    
+    /// 返回
+    /// - Parameters:
+    ///   - isPopToRoot: 是否是返回到rootViewController
+    ///   - animated: 是否采用动画
+    func popOrDismissViewController(isPopToRoot: Bool? = false, animated: Bool = true) {
+        
+        if let nav = self.navigationController {
+            if nav.viewControllers.count == 1 && nav.viewControllers.first == self, nav.presentingViewController != nil {
+                nav.dismiss(animated: true, completion: nil)
+            } else {
+                if isPopToRoot == true {
+                    nav.popToRootViewController(animated: animated)
+                }else {
+                    nav.popViewController(animated: animated)
+                }
+            }
+        } else {
+            self.dismiss(animated: animated, completion: nil)
+        }
+    }
+    
+    /// 返回到当前栈内指定类型vc
+    /// - Parameter specifiedVC: 指定的vc类型
+    /// - Returns: 是否成功
+    func popToSpecifiedViewController(specifiedVC: UIViewController.Type) -> Bool {
+        var isSuccess = false
+        if let nav = self.navigationController {
+            for vc in nav.viewControllers {
+                if vc.isKind(of: specifiedVC) {
+                    nav.popToViewController(vc, animated: true)
+                    isSuccess = true
+                    break
+                }
+            }
+        }
+        return isSuccess
+    }
 }

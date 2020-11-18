@@ -21,7 +21,7 @@ public extension UIView {
             layer.borderColor = color.cgColor
         }
     }
-
+    
     @IBInspectable var borderWidth: CGFloat {
         get {
             return layer.borderWidth
@@ -30,7 +30,7 @@ public extension UIView {
             layer.borderWidth = newValue
         }
     }
-
+    
     @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -40,7 +40,7 @@ public extension UIView {
             layer.cornerRadius = abs(CGFloat(Int(newValue * 100)) / 100)
         }
     }
-
+    
     var x: CGFloat {
         get {
             return frame.origin.x
@@ -76,7 +76,7 @@ public extension UIView {
             frame.size.height = newValue
         }
     }
-
+    
     var origin: CGPoint {
         get {
             return frame.origin
@@ -104,7 +104,7 @@ public extension UIView {
         layer.render(in: context)
         return UIGraphicsGetImageFromCurrentImageContext()
     }
-
+    
     /// SwifterSwift: Masks to bounds of view; also inspectable from Storyboard.
     @IBInspectable var masksToBounds: Bool {
         get {
@@ -114,7 +114,7 @@ public extension UIView {
             layer.masksToBounds = newValue
         }
     }
-
+    
     /// SwifterSwift: Get view's parent view controller
     var parentViewController: UIViewController? {
         weak var parentResponder: UIResponder? = self
@@ -126,7 +126,7 @@ public extension UIView {
         }
         return nil
     }
-
+    
 }
 
 public extension UIView {
@@ -144,7 +144,7 @@ public extension UIView {
         } while index < views.count
         return nil
     }
-
+    
     /// SwifterSwift: Set some or all corners radiuses of view.
     ///
     /// - Parameters:
@@ -155,12 +155,12 @@ public extension UIView {
             roundedRect: bounds,
             byRoundingCorners: corners,
             cornerRadii: CGSize(width: radius, height: radius))
-
+        
         let shape = CAShapeLayer()
         shape.path = maskPath.cgPath
         layer.mask = shape
     }
-
+    
     /// SwifterSwift: Add shadow to view.
     ///
     /// - Note: This method only works with non-clear background color, or if the view has a `shadowPath` set.
@@ -182,15 +182,15 @@ public extension UIView {
         layer.shadowOpacity = opacity
         layer.masksToBounds = false
     }
-
+    
     /// SwifterSwift: Add array of subviews to view.
     ///
     /// - Parameter subviews: array of subviews to add to self.
     func addSubviews(_ subviews: [UIView]) {
         subviews.forEach { addSubview($0) }
     }
-
-   
+    
+    
     /// SwifterSwift: Load view from nib.
     ///
     /// - Parameters:
@@ -200,7 +200,7 @@ public extension UIView {
     class func loadFromNib(named name: String, bundle: Bundle? = nil) -> UIView? {
         return UINib(nibName: name, bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? UIView
     }
-
+    
     /// SwifterSwift: Load view of a certain type from nib
     ///
     /// - Parameters:
@@ -214,7 +214,7 @@ public extension UIView {
         }
         return view
     }
-
+    
     /// 从Nib初始化一个View by walker
     /// - Parameter bundle: 初始化时指定的包
     /// - Returns: 指定类型的UIView
@@ -226,7 +226,7 @@ public extension UIView {
     func removeSubviews() {
         subviews.forEach { $0.removeFromSuperview() }
     }
-
+    
     /// 添加点击手势
     /// - Parameters:
     ///   - target: 事件响应者
@@ -236,29 +236,28 @@ public extension UIView {
     /// - Returns:
     @discardableResult
     func addTapGestureRecognizer(target : Any?, action : Selector?, numberOfTapsRequired: Int = 1, numberOfTouchesRequired: Int = 1) -> UITapGestureRecognizer {
-        
         let tapGesture = UITapGestureRecognizer.init(target: target, action: action)
         tapGesture.numberOfTapsRequired    = numberOfTapsRequired;
         tapGesture.numberOfTouchesRequired = numberOfTouchesRequired;
         tapGesture.cancelsTouchesInView    = true;
         tapGesture.delaysTouchesBegan      = true;
         tapGesture.delaysTouchesEnded      = true;
-        
         self.addGestureRecognizer(tapGesture)
         self.isUserInteractionEnabled = true
         
         return tapGesture
     }
-    /// - 添加细线 ply线高
+    
+    /// - 添加细线，height细线高度
     @discardableResult
-    func addLine(position : LinePosition, color : UIColor, ply : CGFloat, leftPadding : CGFloat, rightPadding : CGFloat) -> UIView {
+    func addLine(position : LinePosition, color : UIColor, height : CGFloat, leftPadding : CGFloat, rightPadding : CGFloat) -> UIView {
         let line = UIView.init()
         line.backgroundColor = color;
         line.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(line)
         line.leftAnchor.constraint(equalTo: leftAnchor, constant: leftPadding).isActive = true
         line.rightAnchor.constraint(equalTo: leftAnchor, constant: rightPadding).isActive = true
-        line.heightAnchor.constraint(equalToConstant: ply).isActive = true
+        line.heightAnchor.constraint(equalToConstant: height).isActive = true
         switch position {
         case .top:
             line.topAnchor.constraint(equalTo: topAnchor, constant: 0).isActive = true

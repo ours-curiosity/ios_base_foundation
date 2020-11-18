@@ -241,7 +241,7 @@ public extension UIViewController {
 }
 
 // 控制器切换快捷方法
-extension UIViewController {
+public extension UIViewController {
     
     /// 展示一个控制器，优先push
     /// - Parameters:

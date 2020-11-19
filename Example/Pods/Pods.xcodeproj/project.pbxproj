@@ -681,6 +681,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 0.6.3;
 				MODULEMAP_FILE = "Target Support Files/BaseFoundation/BaseFoundation.modulemap";
 				PRODUCT_MODULE_NAME = BaseFoundation;
 				PRODUCT_NAME = BaseFoundation;
@@ -774,6 +775,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 0.6.3;
 				MODULEMAP_FILE = "Target Support Files/BaseFoundation/BaseFoundation.modulemap";
 				PRODUCT_MODULE_NAME = BaseFoundation;
 				PRODUCT_NAME = BaseFoundation;

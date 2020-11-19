@@ -34,7 +34,7 @@ def pushToMain():
 
 def pushToPrivateSpecs():
     checkCommand = "pod spec lint --sources='https://github.com/ours-curiosity/CTSpecs,https://github.com/CocoaPods/Specs'"
-    pushCommand = "pod repo push CTSpecs BaseFoundation.podspec --sources='https://github.com/ours-curiosity/CTSpecs,https://github.com/CocoaPods/Specs'"
+    pushCommand = "pod repo push CTSpecs CTBaseFoundation.podspec --sources='https://github.com/ours-curiosity/CTSpecs,https://github.com/CocoaPods/Specs'"
     updatePirvateRepo = "pod repo update CTSpecs"
 
     checkRet = os.system(checkCommand)

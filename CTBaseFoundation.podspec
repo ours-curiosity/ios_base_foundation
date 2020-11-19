@@ -7,12 +7,12 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'BaseFoundation'
-  s.version          = '0.6.3'
+  s.name             = 'CTBaseFoundation'
+  s.version          = '0.6.5'
   s.summary          = 'iOS 基础加速库.'
 
   s.description      = <<-DESC
-  你可以使用baseBaseFoundation来快速构建新的app. ios 10.0, swift 5
+  你可以使用CTBaseFoundation来快速构建新的app. ios 10.0, swift 5
                        DESC
 
   s.homepage         = 'https://github.com/ours-curiosity/ios_base_foundation'

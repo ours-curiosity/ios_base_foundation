@@ -1,22 +1,22 @@
 PODS:
-  - BaseFoundation (0.6.0):
-    - BaseFoundation/Core (= 0.6.0)
-    - BaseFoundation/Extension (= 0.6.0)
-    - BaseFoundation/UIKit (= 0.6.0)
-  - BaseFoundation/Core (0.6.0)
-  - BaseFoundation/Extension (0.6.0)
-  - BaseFoundation/UIKit (0.6.0)
+  - CTBaseFoundation (0.6.5):
+    - CTBaseFoundation/Core (= 0.6.5)
+    - CTBaseFoundation/Extension (= 0.6.5)
+    - CTBaseFoundation/UIKit (= 0.6.5)
+  - CTBaseFoundation/Core (0.6.5)
+  - CTBaseFoundation/Extension (0.6.5)
+  - CTBaseFoundation/UIKit (0.6.5)
 
 DEPENDENCIES:
-  - BaseFoundation (from `../`)
+  - CTBaseFoundation (from `../`)
 
 EXTERNAL SOURCES:
-  BaseFoundation:
+  CTBaseFoundation:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BaseFoundation: 9cae68399a893cae20c5b883893758c035c2c554
+  CTBaseFoundation: 077227461d1554db7731729a3c5546ad85f361a5
 
-PODFILE CHECKSUM: 179301747a1e28abb31624eb06d528f01010fb16
+PODFILE CHECKSUM: 0420fc6732156b288335bf844c2289a55a1e6f9c
 
 COCOAPODS: 1.10.0

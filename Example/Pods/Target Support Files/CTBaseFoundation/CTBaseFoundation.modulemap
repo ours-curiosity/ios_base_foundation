@@ -1,0 +1,6 @@
+framework module CTBaseFoundation {
+  umbrella header "CTBaseFoundation-umbrella.h"
+
+  export *
+  module * { export * }
+}

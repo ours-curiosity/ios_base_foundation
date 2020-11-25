@@ -13,6 +13,6 @@
 #import "UIStatusBarManager+Tap.h"
 #import "UIStatusBarManager+Tap.h"
 
-FOUNDATION_EXPORT double BaseFoundationVersionNumber;
-FOUNDATION_EXPORT const unsigned char BaseFoundationVersionString[];
+FOUNDATION_EXPORT double CTBaseFoundationVersionNumber;
+FOUNDATION_EXPORT const unsigned char CTBaseFoundationVersionString[];
 

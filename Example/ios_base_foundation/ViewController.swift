@@ -7,13 +7,14 @@
 //
 
 import UIKit
-import BaseFoundation
+import CTBaseFoundation
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.white
+        UIImage.imageNamed("", bundleForClass: type(of: self), bundleName: "ios_base")
     }
 
 }

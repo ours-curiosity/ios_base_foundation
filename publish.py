@@ -11,6 +11,11 @@ def logo():
  |____/  \___| \__,_||_|    \_____|\___/ |_|   \___|
                                                                                                                     
     """)
+    return
+
+
+def selectOperator():
+    
     print("")
     print("* 1. 提交到develop分支")
     print("* 2. 提交到main分支")
@@ -117,6 +122,8 @@ if __name__ == "__main__":
     logo()
     # 输入库名称
     podName = str(input("请输入要发布的pod库名称:"))
+    # 输入操作类型
+    selectOperator()
     # 输入发布类型
     option = int(input("请选择发布的类型:"))
     # 去发布

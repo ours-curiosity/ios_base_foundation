@@ -133,15 +133,17 @@ public extension UIImage {
     ///   - bundleName: bundle名称
     /// - Returns: 指定bundle下的图片对象
     class func imageNamed(_ name: String?, bundleForClass: AnyClass?, bundleName: String? = nil) -> UIImage? {
-        
         var bundle: Bundle? = nil
-        
         if bundleForClass != nil && bundleName != nil {
             if let bundlePath = Bundle.init(for: bundleForClass!).path(forResource: bundleName, ofType: "bundle") {
                 bundle = Bundle.init(path: bundlePath)
             }
         }
-        
+        if bundle != nil {
+            if bundle!.isLoaded == false {
+                bundle?.load()
+            }
+        }
         return UIImage.init(named: name ?? "", in: bundle, compatibleWith: nil)
     }
     

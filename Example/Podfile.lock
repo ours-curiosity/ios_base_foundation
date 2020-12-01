@@ -1,11 +1,11 @@
 PODS:
-  - CTBaseFoundation (0.6.5):
-    - CTBaseFoundation/Core (= 0.6.5)
-    - CTBaseFoundation/Extension (= 0.6.5)
-    - CTBaseFoundation/UIKit (= 0.6.5)
-  - CTBaseFoundation/Core (0.6.5)
-  - CTBaseFoundation/Extension (0.6.5)
-  - CTBaseFoundation/UIKit (0.6.5)
+  - CTBaseFoundation (0.6.7):
+    - CTBaseFoundation/Core (= 0.6.7)
+    - CTBaseFoundation/Extension (= 0.6.7)
+    - CTBaseFoundation/UIKit (= 0.6.7)
+  - CTBaseFoundation/Core (0.6.7)
+  - CTBaseFoundation/Extension (0.6.7)
+  - CTBaseFoundation/UIKit (0.6.7)
 
 DEPENDENCIES:
   - CTBaseFoundation (from `../`)
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CTBaseFoundation: 077227461d1554db7731729a3c5546ad85f361a5
+  CTBaseFoundation: b0a34b4b01198d61464095ae0d38451bc95307bc
 
 PODFILE CHECKSUM: 0420fc6732156b288335bf844c2289a55a1e6f9c
 

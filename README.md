@@ -13,7 +13,7 @@
 本项目最开始 基于 [SwifterSwift](https://github.com/SwifterSwift/SwifterSwift/blob/master/README.md)
 
 - ios 基础库
-  `BaseFoundation`
+  `CTBaseFoundation`
 
 ## 要求：
 - swift:5.0
@@ -31,22 +31,22 @@ source 'https://github.com/ours-curiosity/CTSpecs'
 ```
 > 3. 添加以下语句到`Podfile`文件
 ```
-pod 'BaseFoundation' 
+pod 'CTBaseFoundation' 
 ```
 
 ###  只想导入最基础的功能(Core)：
 ```
-pod 'BaseFoundation/Core'
+pod 'CTBaseFoundation/Core'
 ```
 
 ###  只导入所有扩展(Extensions)：
 ```
-pod 'BaseFoundation/Extension' 
+pod 'CTBaseFoundation/Extension' 
 ```
 
 ###  只导入UIKit相关扩展(UIKit)：
 ```
-pod 'BaseFoundation/UIKit' 
+pod 'CTBaseFoundation/UIKit' 
 ```
 
 ## 备注：
@@ -56,4 +56,4 @@ pod 'BaseFoundation/UIKit'
 
 ## License
 
-BaseUIWidget is available under the MIT license. See the LICENSE file for more info.
+CTBaseFoundation is available under the MIT license. See the LICENSE file for more info.

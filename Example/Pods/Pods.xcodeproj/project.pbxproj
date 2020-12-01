@@ -116,7 +116,7 @@
 		79541ED1C1BFA36078E6804F2B3948E0 /* CTBaseFoundation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CTBaseFoundation-dummy.m"; sourceTree = "<group>"; };
 		7A5323C27EFFFECB3FDA41745ED385E6 /* UINavigationBarExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UINavigationBarExtensions.swift; sourceTree = "<group>"; };
 		7AC030B8B6A4F2C15852FD19D706941F /* Pods-ios_base_foundation_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ios_base_foundation_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		7AF640D09483FC81B15DCE5F1873C395 /* CTBaseFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CTBaseFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AF640D09483FC81B15DCE5F1873C395 /* CTBaseFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CTBaseFoundation.framework; path = CTBaseFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CAF55D115D3127233FFE66377476A3F /* UIImageExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		7F402EAA61E6FC948D7BCDF596195151 /* ColorExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		7F5A159809B778D942F295BDC4935B4A /* UIActivityExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIActivityExtensions.swift; sourceTree = "<group>"; };
@@ -126,10 +126,10 @@
 		8B8252475AA7A945F56D15D0A7CDE69D /* DataExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
 		8BC192278FC367259F67795875207487 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		8D74C5A53E2C5387848A2DDD5B3B964B /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
-		8EA7895E5C42FA927A80570A4D8B2BF8 /* Pods_ios_base_foundation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_base_foundation_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EA7895E5C42FA927A80570A4D8B2BF8 /* Pods_ios_base_foundation_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ios_base_foundation_Example.framework; path = "Pods-ios_base_foundation_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F313056CC0E6B2F129C82EC8E74FE5F /* UITabBarExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITabBarExtensions.swift; sourceTree = "<group>"; };
 		9567F6BEBFA62951EEE9BA1668147736 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EFFED00B691C56E09CE6D2B2BC4C7B8 /* AppInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		A43270ABA014B0AC8D729397EDF25DB0 /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensions.swift; sourceTree = "<group>"; };
 		A94673DCDBE12C95A1F56D9243F32838 /* FileManagerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileManagerExtensions.swift; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 		B1BC8CE44E2FEDD96955854323087BC4 /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
 		B4C3DF5C21B4F75A69A2010EBD8E44EC /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		B56ACDDADB2FA9812D57BC73D738CD86 /* Pods-ios_base_foundation_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ios_base_foundation_Example-umbrella.h"; sourceTree = "<group>"; };
-		B66C456EDE841460E2A5E73564FF3B0B /* CTBaseFoundation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CTBaseFoundation.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		B66C456EDE841460E2A5E73564FF3B0B /* CTBaseFoundation.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CTBaseFoundation.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B94B5E413FB535F4A40045F9C1624E64 /* UILabelExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
 		BB024CDA4E6EBFD3CED17D0227C59059 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		C0E05C09C74C4F543ADD4C9C33AD2C0D /* CTBaseFoundation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CTBaseFoundation-prefix.pch"; sourceTree = "<group>"; };
@@ -149,8 +149,8 @@
 		C9C5EF7678193B8BE082FAEFDB129821 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		CF99AD2895C102E1628143653037D683 /* CTBaseFoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CTBaseFoundation.modulemap; sourceTree = "<group>"; };
 		D29D9BA63D24B3839DDBBA324513C328 /* Pods-ios_base_foundation_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ios_base_foundation_Example-Info.plist"; sourceTree = "<group>"; };
-		D4C1289F25852775890488BA4D77B198 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		D78F2A951843A5A0778E55F6557A9A87 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D4C1289F25852775890488BA4D77B198 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D78F2A951843A5A0778E55F6557A9A87 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		D8F37139FDE982CD56FE4DBD264D0135 /* CGRectExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CGRectExtensions.swift; sourceTree = "<group>"; };
 		DC258FF25AD5D3A893A5FAE9577ADB45 /* DateExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		DC54818918DA09093E9AA462BE8656B3 /* UIApplicationExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIApplicationExtensions.swift; sourceTree = "<group>"; };
@@ -228,6 +228,7 @@
 				E41494FE99BEB9B655238E616C541208 /* IntExtensions.swift */,
 				E5876E349D16DFFF67153CC264BAE9AA /* StringExtensions.swift */,
 			);
+			name = Stdlib;
 			path = Stdlib;
 			sourceTree = "<group>";
 		};
@@ -245,6 +246,7 @@
 			children = (
 				08D4E035DEB45E4A9D4705F3EC322079 /* CLLocationExtensions.swift */,
 			);
+			name = CoreLocation;
 			path = CoreLocation;
 			sourceTree = "<group>";
 		};
@@ -257,6 +259,7 @@
 				D8F37139FDE982CD56FE4DBD264D0135 /* CGRectExtensions.swift */,
 				882BCC62794937985E6E6D1AB2170595 /* CGSizeExtensions.swift */,
 			);
+			name = CoreGraphics;
 			path = CoreGraphics;
 			sourceTree = "<group>";
 		};
@@ -273,6 +276,7 @@
 			children = (
 				50807A31B266B1F4BDFB349AD1B93CEB /* WKWebViewExtensions.swift */,
 			);
+			name = WebKit;
 			path = WebKit;
 			sourceTree = "<group>";
 		};
@@ -314,6 +318,7 @@
 				192453F1CD2F14EAD1286B2D8E61BBBC /* NSAttributedStringExtensions.swift */,
 				DEA22337E3D518DE05A70651BE8C7200 /* URLExtensions.swift */,
 			);
+			name = Foundation;
 			path = Foundation;
 			sourceTree = "<group>";
 		};
@@ -335,6 +340,7 @@
 			children = (
 				FB3E17C329682F2B72B0B8B65671493B /* DispatchQueueExtensions.swift */,
 			);
+			name = Dispatch;
 			path = Dispatch;
 			sourceTree = "<group>";
 		};
@@ -372,6 +378,7 @@
 				43E310FBE7D47068299E710D631A55F4 /* UIWindowExtensions.swift */,
 				E5033D6B212C0E814FBD53E4AE4A0DDE /* UIStatusBarManager+Tap */,
 			);
+			name = UIKit;
 			path = UIKit;
 			sourceTree = "<group>";
 		};
@@ -440,6 +447,7 @@
 				E133FC4FA15BE31C122BEB87EA85E9F9 /* UIStatusBarManager+Tap.h */,
 				E1725B48F6E382844F0B6FE96057C893 /* UIStatusBarManager+Tap.m */,
 			);
+			name = "UIStatusBarManager+Tap";
 			path = "UIStatusBarManager+Tap";
 			sourceTree = "<group>";
 		};
@@ -724,7 +732,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -749,7 +758,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 0.6.6;
 				MODULEMAP_FILE = "Target Support Files/CTBaseFoundation/CTBaseFoundation.modulemap";
 				PRODUCT_MODULE_NAME = CTBaseFoundation;
 				PRODUCT_NAME = CTBaseFoundation;
@@ -883,7 +891,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MARKETING_VERSION = 0.6.6;
 				MODULEMAP_FILE = "Target Support Files/CTBaseFoundation/CTBaseFoundation.modulemap";
 				PRODUCT_MODULE_NAME = CTBaseFoundation;
 				PRODUCT_NAME = CTBaseFoundation;

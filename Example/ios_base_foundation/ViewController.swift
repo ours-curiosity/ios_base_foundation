@@ -14,7 +14,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.white
-        UIImage.imageNamed("", bundleForClass: type(of: self), bundleName: "ios_base")
+//        UIImage.imageNamed("", bundleForClass: type(of: self), bundleName: "ios_base")
+        
+        
+        testUIFit()
+    }
+    
+    func testUIFit() {
+        
+        print("height: \(UIFit.height), width: \(UIFit.width)")
+        print("isHetero: \(UIFit.isHetero)")
+        print("navBarSafeHeight: \(UIFit.navBarSafeHeight)")
+        print("tabBarSafeBottom: \(UIFit.tabSafeBottom)")
+        print("statusBarHeight: \(UIFit.statusBarHeight)")
+        print("navBarHeight: \(UIFit.navBarHeight)")
+        print("navgationBar all Height: \(UIFit.navWithStatusBarHeight)")
     }
 
 }

@@ -20,7 +20,7 @@
 		535325A1A057120F62CE4651 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5D3EEB05255A48DF006A4AE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D3EEB06255A48DF006A4AE2 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		5DD27FDC256E037A00015B1E /* CTBaseFoundation.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = CTBaseFoundation.podspec; path = ../CTBaseFoundation.podspec; sourceTree = "<group>"; };
+		5DD27FDC256E037A00015B1E /* CTBaseFoundation.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = CTBaseFoundation.podspec; path = ../CTBaseFoundation.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACD01AFB9204008FA782 /* ios_base_foundation_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_base_foundation_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };

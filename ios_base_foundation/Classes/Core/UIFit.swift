@@ -26,20 +26,19 @@ public class UIFit {
         return hetero
     }
     
-    /// TableBar距底部区域高度
-    public class var tabSafeBottom : CGFloat {
-        var bottomHeight : CGFloat = 0.0
-        if isHetero {
-            bottomHeight = 34.0
-        }
-        return bottomHeight
+    /// TabBar距底部区域高度
+    public class var tabSafeBottom: CGFloat {
+        return isHetero ? 34.0 : 0.0
     }
+    
+    /// navBar距顶部区域安全高度
+    public class var navBarSafeHeight: CGFloat {
+        return isHetero ? 24.0 : 0.0
+    }    
     
     /// 状态栏的高度
     public class var statusBarHeight : CGFloat {
-        var height = UIApplication.shared.statusBarFrame.size.height
-        height = height < 20 ? (tabSafeBottom > 0 ? 44 : 20) : height
-        return height
+        return isHetero ? 44.0 : 20.0
     }
     
     /// 导航栏的高度
@@ -49,8 +48,7 @@ public class UIFit {
     
     /// 导航栏和状态栏的总高度
     public class var navWithStatusBarHeight : CGFloat {
-        let heigth = statusBarHeight + navBarHeight
-        return heigth
+        return isHetero ? 88.0 : 64.0
     }
     
     /// 按宽度适配

@@ -12,7 +12,7 @@ public extension Array {
     mutating func insertFirst(_ newElement: Element) {
         insert(newElement, at: 0)
     }
-
+    
     /// 安全交换
     ///
     ///        [1, 2, 3, 4, 5].safeSwap(from: 3, to: 0) -> [4, 2, 3, 1, 5]
@@ -44,7 +44,7 @@ public extension Array where Element: Equatable {
         removeAll(where: { $0 == item })
         return self
     }
-
+    
     /// 移除某几项 [1, 2, 2, 3, 4, 5].removeAll([2,5]) -> [1, 3, 4]
     ///
     ///        [1, 2, 2, 3, 4, 5].removeAll([2,5]) -> [1, 3, 4]
@@ -58,7 +58,7 @@ public extension Array where Element: Equatable {
         removeAll(where: { items.contains($0) })
         return self
     }
-
+    
     /// 去重
     ///
     ///     [1, 1, 2, 2, 3, 3, 3, 4, 5].withoutDuplicates() -> [1, 2, 3, 4, 5])
@@ -73,5 +73,17 @@ public extension Array where Element: Equatable {
                 $0.append($1)
             }
         }
+    }
+}
+
+public extension Array {
+    
+    /// 转 json data
+    /// - Parameter prettify: set true to prettify data (default is false).
+    /// - Returns: optional JSON Data (if applicable).
+    func toJsonData(prettify: Bool = false) -> Data? {
+        guard JSONSerialization.isValidJSONObject(self) else {return nil}
+        let options = (prettify == true) ? JSONSerialization.WritingOptions.prettyPrinted: JSONSerialization.WritingOptions()
+        return try? JSONSerialization.data(withJSONObject: self, options: options)
     }
 }

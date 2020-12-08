@@ -17,12 +17,8 @@ public extension UIColor {
     class func hex(_ hex: String, alpha: CGFloat = 1.0) -> UIColor{
         let tempStr = hex.trimmingCharacters(in: .whitespacesAndNewlines)
         let hexint = intFromHexString(tempStr)
-        if alpha != 1{
-            let color = UIColor(red: ((CGFloat) ((hexint & 0xFF0000) >> 16))/255, green: ((CGFloat) ((hexint & 0xFF00) >> 8))/255, blue: ((CGFloat) (hexint & 0xFF))/255, alpha: alpha)
-            return color
-        }else{
-            return hex8(hexint)
-        }
+        let color = UIColor(red: ((CGFloat) ((hexint & 0xFF0000) >> 16))/255, green: ((CGFloat) ((hexint & 0xFF00) >> 8))/255, blue: ((CGFloat) (hexint & 0xFF))/255, alpha: alpha)
+        return color
     }
     
     
@@ -290,47 +286,5 @@ public extension Color {
         let blue: CGFloat = sqrt(pow(255.0, 2.0) - pow(componentColors[2] * 255, 2.0)) / 255
         self.init(red: red, green: green, blue: blue, alpha: 1.0)
     }
-    /// 支持 hex 8位 和 6位
-    private static func hex8(_ val: UInt) -> UIColor {
-        var r: UInt = 0, g: UInt = 0, b: UInt = 0;
-        var a: UInt = 0xFF
-        var rgb = val
-
-        if (val & 0xFFFF0000) == 0 {
-            a = 0xF
-
-            if val & 0xF000 > 0 {
-                a = val & 0xF
-                rgb = val >> 4
-            }
-
-            r = (rgb & 0xF00) >> 8
-            r = (r << 4) | r
-
-            g = (rgb & 0xF0) >> 4
-            g = (g << 4) | g
-
-            b = rgb & 0xF
-            b = (b << 4) | b
-
-            a = (a << 4) | a
-
-        } else {
-            if val & 0xFF000000 > 0 {
-                a = val & 0xFF
-                rgb = val >> 8
-            }
-
-            r = (rgb & 0xFF0000) >> 16
-            g = (rgb & 0xFF00) >> 8
-            b = rgb & 0xFF
-        }
-
-        //NSLog("r:%X g:%X b:%X a:%X", r, g, b, a)
-
-        return UIColor(red: CGFloat(r) / 255.0,
-                       green: CGFloat(g) / 255.0,
-                       blue: CGFloat(b) / 255.0,
-                       alpha: CGFloat(a) / 255.0)
-    }
+    
 }

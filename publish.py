@@ -18,9 +18,10 @@ def logo():
 def selectOperator():
     
     print("")
-    print("* 1. 提交到develop分支")
-    print("* 2. 提交到main分支")
-    print("* 3. 提交到私有仓库（CTSpecs）")
+    print("* 1. 直接push到私有仓库（CTSpecs）")
+    print("* 2. 提交到develop分支")
+    print("* 3. 提交到main分支")
+    print("* 4. 提交到main并push到私有仓库（CTSpecs）")
     print("")
     return
 
@@ -87,9 +88,8 @@ def pushToMain():
     pushToGit("main")
     return
 
-
-def pushToPrivateSpecs():
-
+# 提交到main，并且打tag，推送到CTSpecs
+def pushToMainAndPrivateSpecs():
     switchBranch(3)
     pushToGit("main")
 
@@ -98,9 +98,14 @@ def pushToPrivateSpecs():
         print("输入版本号为空，跳过设置 Tag 步骤")
     else:
         addGitTag(tag)
+    pushToPrivateSpecs()
+
+
+# 直接push到CTSpecs
+def pushToPrivateSpecs():
 
     checkCommand = "pod spec lint --sources='https://github.com/ours-curiosity/CTSpecs,https://github.com/CocoaPods/Specs' --allow-warnings"
-    pushCommand = "pod repo push CTSpecs %s.podspec --sources='https://github.com/ours-curiosity/CTSpecs,https://github.com/CocoaPods/Specs' --allow-warnings"%podName
+    pushCommand = "pod repo push CTSpecs %s.podspec --sources='https://github.com/ours-curiosity/CTSpecs,https://github.com/CocoaPods/Specs' --allow-warnings --use-modular-headers"%podName
     updatePirvateRepo = "pod repo update CTSpecs"
     checkRet = os.system(checkCommand)
     if checkRet != 0:
@@ -114,7 +119,6 @@ def pushToPrivateSpecs():
         else:
             print("上传完成！！")
             os.system(updatePirvateRepo)
-
     return
 
 
@@ -126,13 +130,21 @@ if __name__ == "__main__":
     # 输入操作类型
     selectOperator()
     # 输入发布类型
-    option = int(input("请选择发布的类型:"))
+    option = input("请选择发布的类型(默认为1):")
+    # option 不输入时默认为1，否则为输入内容
+    if len(option) <= 0:
+        option = 1
+    else:
+        option = int(option)
+
     # 去发布
     if option == 1:
-        pushToGit("develop")
-    elif option == 2:
-        pushToGit("main")
-    elif option == 3:
         pushToPrivateSpecs()
+    elif option == 2:
+        pushToGit("develop")
+    elif option == 3:
+        pushToGit("main")
+    elif option == 4:
+        pushToMainAndPrivateSpecs()
     else:
-        print("???!! -> 请输入正确的选项!!")
+        print("🤨 -> 请输入正确的选项!!")

@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1883DB1A2580D182005B1824 /* ChangeLog.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = ChangeLog.md; path = ../ChangeLog.md; sourceTree = "<group>"; };
 		535325A1A057120F62CE4651 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		5D3EEB05255A48DF006A4AE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D3EEB06255A48DF006A4AE2 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				1883DB1A2580D182005B1824 /* ChangeLog.md */,
 				5DD27FDC256E037A00015B1E /* CTBaseFoundation.podspec */,
 				535325A1A057120F62CE4651 /* README.md */,
 				9D72F48F008C587AB655C7D0 /* LICENSE */,

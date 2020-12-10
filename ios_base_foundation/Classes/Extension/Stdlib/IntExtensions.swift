@@ -18,10 +18,15 @@ public extension Int {
     var float: Float {
         return Float(self)
     }
+    
     /// SwifterSwift: CGFloat.
     var cgFloat: CGFloat {
         return CGFloat(self)
     }
-
+    
+    /// walker: String
+    var string: String {
+        return String(self)
+    }
 }
 

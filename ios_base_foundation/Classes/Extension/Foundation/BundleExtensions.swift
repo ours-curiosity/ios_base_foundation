@@ -10,13 +10,13 @@ public extension Bundle {
     
     /// 生成指定的bundle
     /// - Parameters:
-    ///   - className: module中的类型
+    ///   - classType: module中某个类的类型
     ///   - bundleName: bundle的名称
     /// - Returns: 指定的bundle
-    class func bundle(className: AnyClass?, bundleName: String?) -> Bundle {
+    class func bundle(classType: AnyClass?, bundleName: String?) -> Bundle {
         var bundle: Bundle? = Bundle.main
-        if className != nil && bundleName != nil && !bundleName!.isEmpty {
-            if let bundlePath = Bundle.init(for: className!).path(forResource: bundleName, ofType: "bundle") {
+        if classType != nil && bundleName != nil && !bundleName!.isEmpty {
+            if let bundlePath = Bundle.init(for: classType!).path(forResource: bundleName, ofType: "bundle") {
                 bundle = Bundle.init(path: bundlePath)
             }
         }

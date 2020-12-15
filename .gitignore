@@ -5,6 +5,8 @@
 ## idea
 .idea/
 Pods/
+Podfile.lock
+
 ## User settings
 xcuserdata/
 

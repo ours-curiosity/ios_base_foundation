@@ -1,6 +1,9 @@
 # CTBaseFoundation ChangeLog
 ----
 
+### 0.7.0.5
+>* 1. 添加`String`计算所占尺寸方法`textRect(attributes:, maxSize:) -> CGRect`
+
 ### 0.7.0.4
 >* 1. 移除 UIImage扩展中的`imageNamed(_ name:, bundleForClass:, bundleName:)`方法中`bundle.load()`方法，防止控制台警告
 >* 2. 完善`.gitignore`文件

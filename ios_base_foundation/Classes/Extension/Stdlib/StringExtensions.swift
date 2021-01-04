@@ -319,3 +319,26 @@ public extension String {
     }
 }
 
+// MARK: - String Rect
+public extension String {
+    
+    /// 获得文字占据的区域大小
+    /// - Parameter font: 字体大小
+    /// - Parameter maxSize: 最大区域
+    /// - Returns: 所占尺寸
+    func textRect(font: UIFont, maxSize: CGSize) -> CGRect {
+        let attributes: [NSAttributedString.Key:Any] = [NSAttributedString.Key.font: font]
+        return self.textRect(attributes: attributes, maxSize: maxSize)
+    }
+    
+    /// 获得文字占据的区域大小
+    /// - Parameters:
+    ///   - attributes: 字体属性
+    ///   - maxSize: 最大区域
+    /// - Returns: 所占尺寸
+    func textRect(attributes: [NSAttributedString.Key: Any], maxSize: CGSize) -> CGRect {
+        let nsString: NSString = self as NSString
+        let rect = nsString.boundingRect(with: maxSize, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attributes, context: nil)
+        return rect
+    }
+}

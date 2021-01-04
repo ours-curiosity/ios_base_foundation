@@ -139,11 +139,6 @@ public extension UIImage {
                 bundle = Bundle.init(path: bundlePath)
             }
         }
-        if bundle != nil {
-            if bundle!.isLoaded == false {
-                bundle?.load()
-            }
-        }
         return UIImage.init(named: name ?? "", in: bundle, compatibleWith: nil)
     }
     

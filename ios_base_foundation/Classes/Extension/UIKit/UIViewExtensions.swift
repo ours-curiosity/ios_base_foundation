@@ -31,7 +31,7 @@ public extension UIView {
         }
     }
     
-    @IBInspectable var cornerRadius: CGFloat {
+    @IBInspectable var ct_cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }

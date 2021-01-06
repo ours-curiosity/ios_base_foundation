@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'CTBaseFoundation'
 
-  s.version          = '0.7.0.6'
+  s.version          = '0.7.1.0'
 
   s.summary          = 'iOS 基础加速库.'
 

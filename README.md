@@ -14,6 +14,8 @@
 
 - ios 基础库
   `CTBaseFoundation`
+- 更新内容记录：[ChangeLog](https://github.com/ours-curiosity/ios_base_foundation/blob/main/ChangeLog.md)
+
 
 ## 要求：
 - swift:5.0

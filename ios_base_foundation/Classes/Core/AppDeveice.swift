@@ -63,7 +63,7 @@ public class AppDeveice:NSObject {
     }
     /// 网络类型
     public static var netType:String{
-        if let reach = try? Reachability.init(hostname: "https://baidu.com"){
+        if let reach = try? CTReachability(){
             switch (reach.connection) {
             case .unavailable:// 没有网络
                 return "unavailable"

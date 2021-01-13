@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'CTBaseFoundation'
 
-  s.version          = '0.7.1.4'
+  s.version          = '0.7.1.5'
 
   s.summary          = 'iOS 基础加速库.'
 
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.swift_version = "5.0"
   
   s.source_files = 'ios_base_foundation/Classes/**/*'
-  
+  s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
   # Core
   s.subspec 'Core' do |sp|
     sp.source_files  = 'ios_base_foundation/Classes/Core/*'

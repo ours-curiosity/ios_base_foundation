@@ -7,9 +7,10 @@
 
 import Foundation
 import AdSupport
+import CoreTelephony
 
-public struct AppDeveice {
-    
+@objcMembers
+public class AppDeveice:NSObject {
     /// 设备信息
     public static var info: String {
         let infoStr =
@@ -42,6 +43,105 @@ public struct AppDeveice {
         return ASIdentifierManager.shared().advertisingIdentifier.uuidString
     }
     
+    /// 获取运营商信息(IMSI)
+    public static var imsi:String{
+        //获取并输出运营商信息
+        let info = CTTelephonyNetworkInfo()
+        if let carrier = info.subscriberCellularProvider {
+//            let currentRadioTech = info.currentRadioAccessTechnology!
+//            print("数据业务信息：\(currentRadioTech)")
+//            print("网络制式：\(getNetworkType(currentRadioTech: currentRadioTech))")
+//            print("运营商名字：\(carrier.carrierName!)")
+//            print("移动国家码(MCC)：\(carrier.mobileCountryCode!)")
+//            print("移动网络码(MNC)：\(carrier.mobileNetworkCode!)")
+//            print("ISO国家代码：\(carrier.isoCountryCode!)")
+//            print("是否允许VoIP：\(carrier.allowsVOIP)")
+            return carrier.carrierName  ?? "unknow"
+            
+        }
+        return "unknow"
+    }
+    /// 网络类型
+    public static var netType:String{
+        if let reach = try? CTReachability(){
+            switch (reach.connection) {
+            case .unavailable:// 没有网络
+                return "unavailable"
+            case .wifi:
+                return "WIFI"
+            case .cellular:
+                let info = CTTelephonyNetworkInfo()
+                if let currentRadioTech = info.currentRadioAccessTechnology {
+                    return getNetworkType(currentRadioTech: currentRadioTech)
+                }else{
+                    return "unknow"
+                }
+            default:
+                break
+            }
+        }
+         return "unknow"
+    }
+    //根据数据业务信息获取对应的网络类型
+    public static func getNetworkType(currentRadioTech:String) -> String {
+        var networkType = ""
+        if #available(iOS 14.0, *) {
+            switch currentRadioTech {
+            case CTRadioAccessTechnologyGPRS:
+                networkType = "2G"
+            case CTRadioAccessTechnologyEdge:
+                networkType = "2G"
+            case CTRadioAccessTechnologyeHRPD:
+                networkType = "3G"
+            case CTRadioAccessTechnologyHSDPA:
+                networkType = "3G"
+            case CTRadioAccessTechnologyCDMA1x:
+                networkType = "2G"
+            case CTRadioAccessTechnologyLTE:
+                networkType = "4G"
+            case CTRadioAccessTechnologyCDMAEVDORev0:
+                networkType = "3G"
+            case CTRadioAccessTechnologyCDMAEVDORevA:
+                networkType = "3G"
+            case CTRadioAccessTechnologyCDMAEVDORevB:
+                networkType = "3G"
+            case CTRadioAccessTechnologyHSUPA:
+                networkType = "3G"
+            case CTRadioAccessTechnologyNRNSA:
+                networkType = "5G"
+            case CTRadioAccessTechnologyNR:
+                networkType = "5G"
+            default:
+                break
+            }
+        } else {
+            switch currentRadioTech {
+            case CTRadioAccessTechnologyGPRS:
+                networkType = "2G"
+            case CTRadioAccessTechnologyEdge:
+                networkType = "2G"
+            case CTRadioAccessTechnologyeHRPD:
+                networkType = "3G"
+            case CTRadioAccessTechnologyHSDPA:
+                networkType = "3G"
+            case CTRadioAccessTechnologyCDMA1x:
+                networkType = "2G"
+            case CTRadioAccessTechnologyLTE:
+                networkType = "4G"
+            case CTRadioAccessTechnologyCDMAEVDORev0:
+                networkType = "3G"
+            case CTRadioAccessTechnologyCDMAEVDORevA:
+                networkType = "3G"
+            case CTRadioAccessTechnologyCDMAEVDORevB:
+                networkType = "3G"
+            case CTRadioAccessTechnologyHSUPA:
+                networkType = "3G"
+            default:
+                break
+            }
+        }
+        return networkType
+    }
     /// 设备的剩余空间大小MB
     public static func diskFreeSpace() -> Int {
         var totalFreeSpace: Int = 0

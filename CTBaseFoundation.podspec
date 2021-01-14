@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.swift_version = "5.0"
   
   s.source_files = 'ios_base_foundation/Classes/**/*'
-  
+
   # Core
   s.subspec 'Core' do |sp|
     sp.source_files  = 'ios_base_foundation/Classes/Core/*'

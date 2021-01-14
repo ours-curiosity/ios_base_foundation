@@ -29,16 +29,20 @@ class ViewController: UIViewController {
         print("statusBarHeight: \(UIFit.statusBarHeight)")
         print("navBarHeight: \(UIFit.navBarHeight)")
         print("navgationBar all Height: \(UIFit.navWithStatusBarHeight)")
+        print(AppDeveice.imsi)
+        print(AppDeveice.netType)
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        CTPermission.
 //        CTPermission.req
-        CTPermission.requestMicPhone(success: {
-            print("----1")
-        }, failed: {
-            print("----2")
-        })
+//        CTPermission.requestMicPhone(success: {
+//            print("----1")
+//        }, failed: {
+//            print("----2")
+//        })
+        testUIFit()
     }
 
 }

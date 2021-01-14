@@ -5,10 +5,9 @@
 //  Created by walker on 2021/1/14.
 //
 
-
 import UIKit
 
-public enum ImageType {
+public enum CTImageType {
     case Unknow// 未知
     case JPEG   // image/jpeg
     case PNG    // image/png
@@ -20,12 +19,56 @@ public enum ImageType {
     case HEIF
 }
 
+extension CTImageType {
+    func ct_contentType() -> String {
+        switch self {
+        case .JPEG:
+            return "image/jpeg"
+        case .PNG:
+            return "image/png"
+        case .GIF:
+            return "image/gif"
+        case .WebP:
+            return "image/webp"
+        case .BMP:
+            return "image/bmp"
+        case .TIFF:
+            return "image/tiff"
+        default:
+            return "application/octet-stream"
+        }
+    }
+    
+    func ct_extensionName() -> String {
+        switch self {
+        case .JPEG:
+            return "jpeg"
+        case .PNG:
+            return "png"
+        case .GIF:
+            return "gif"
+        case .WebP:
+            return "webp"
+        case .BMP:
+            return "bmp"
+        case .TIFF:
+            return "tiff"
+        case .HEIC:
+            return "heic"
+        case .HEIF:
+            return "heif"
+        default:
+            return "application/octet-stream"
+        }
+    }
+}
+
 extension Data {
     
     /// type for image data
     /// - Returns: ImageType
-    public func imageType() -> ImageType {
-        var type = ImageType.Unknow
+    public func ct_imageType() -> CTImageType {
+        var type = CTImageType.Unknow
         
         var c: UInt8 = 0xFF
         self.copyBytes(to: &c, count: 1)
@@ -65,7 +108,6 @@ extension Data {
                     return .HEIF
                 }
             }
-            
         default:
             type = .Unknow
         }

@@ -19,7 +19,7 @@ public enum CTImageType {
     case HEIF
 }
 
-extension CTImageType {
+public extension CTImageType {
     func ct_contentType() -> String {
         switch self {
         case .JPEG:

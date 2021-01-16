@@ -51,6 +51,15 @@ public class UIFit {
         return isHetero ? 88.0 : 64.0
     }
     
+    /// 标签栏高度
+    public class var tabBarHeight: CGFloat {
+        return 49.0
+    }
+    /// 标签栏和安全高度总高度
+    public class var tabWithSafeBottomHeight: CGFloat {
+        return isHetero ? 83.0 : 49.0
+    }
+    
     /// 按宽度适配
     /// - Parameter width: 需要适配的宽度
     /// - Returns: 适配后的宽度

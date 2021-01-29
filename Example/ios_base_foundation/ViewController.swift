@@ -16,8 +16,9 @@ class ViewController: UIViewController {
         self.view.backgroundColor = UIColor.white
 //        UIImage.imageNamed("", bundleForClass: type(of: self), bundleName: "ios_base")
         
+        DebugPrint("a","b","c", canPrint: false)
         
-        testUIFit()
+//        testUIFit()
     }
     
     func testUIFit() {

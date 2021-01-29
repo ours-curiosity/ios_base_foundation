@@ -1,6 +1,9 @@
 # CTBaseFoundation ChangeLog
 ----
 
+### 0.7.5.0
+> 1. `DebugPrint()` 添加控制是否打印的参数`canPrint:`
+
 ### 0.7.3.2
 > 1. `UIFit` 添加标签栏相关高度api
 

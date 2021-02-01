@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'CTBaseFoundation'
 
-  s.version          = '0.7.6.0'
+  s.version          = '0.7.7.0'
 
   s.summary          = 'iOS 基础加速库.'
 
@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
   
   # UIKit Extensions
   s.subspec 'UIKit' do |sp|
-    sp.source_files  = 'ios_base_foundation/Classes/Core/*', 'ios_base_foundation/Classes/Extension/UIKit/*'
+    sp.source_files  = 'ios_base_foundation/Classes/Core/*', 'ios_base_foundation/Classes/Extension/UIKit/*', 'ios_base_foundation/Classes/Extension/Stdlib/StringExtensions.swift'
   end
 
 end

@@ -198,4 +198,15 @@ public extension UIButton {
     }
 }
 
+// by walker
+public extension UIButton {
+    /// walker: 获得按钮文本的宽度
+    func titleWidth() -> CGFloat {
+        if let title = self.titleLabel?.text {
+            return title.textRect(font: self.titleLabel?.font ?? UIFont.systemFont(ofSize: 17.0), maxSize: CGSize.init(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)).size.width
+        }
+        return 0
+    }
+}
+
 #endif

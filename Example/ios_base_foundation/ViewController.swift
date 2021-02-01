@@ -19,6 +19,12 @@ class ViewController: UIViewController {
         DebugPrint("a","b","c", canPrint: false)
         
 //        testUIFit()
+        
+        
+        self.view.addSubview(self.btn)
+        
+        self.btn.sizeToFit()
+        DebugPrint(self.btn.titleWidth())
     }
     
     func testUIFit() {
@@ -46,4 +52,16 @@ class ViewController: UIViewController {
         testUIFit()
     }
 
+    
+    lazy var btn: UIButton = {
+        let btn = UIButton.init()
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        if #available(iOS 13.0, *) {
+            btn.setImage(UIImage.init(systemName: "pencil"), for: UIControl.State.normal)
+        }
+        btn.setTitle("这是个测试啊24adg", for: UIControl.State.normal)
+        btn.centerTextAndImage(imageAboveText: true, spacing: 2)
+        return btn
+    }()
+    
 }

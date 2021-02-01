@@ -1,6 +1,9 @@
 # CTBaseFoundation ChangeLog
 ----
 
+### 0.7.6.0
+> 1.  `UIButton` 添加计算`Title`宽度的扩展方法
+
 ### 0.7.5.0
 > 1. `DebugPrint()` 添加控制是否打印的参数`canPrint:`
 

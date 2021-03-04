@@ -1,6 +1,9 @@
 # CTBaseFoundation ChangeLog
 ----
 
+### 0.7.8.0
+> 1. 优化`CTPermission`请求麦克风权限的逻辑
+
 ### 0.7.6.0
 > 1.  `UIButton` 添加计算`Title`宽度的扩展方法
 

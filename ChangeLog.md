@@ -1,5 +1,7 @@
 # CTBaseFoundation ChangeLog
 ----
+### 0.7.9.0
+> 1. 修复`UIImageExtensions`部分`extension`的可见性
 
 ### 0.7.8.0
 > 1. 优化`CTPermission`请求麦克风权限的逻辑

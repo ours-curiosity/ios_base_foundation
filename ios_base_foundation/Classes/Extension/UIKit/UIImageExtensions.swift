@@ -9,20 +9,20 @@ public extension UIImage {
     var bytesSize: Int {
         return (self.jpegData(compressionQuality: 1)?.count ?? 0) / 1024
     }
-
+    
     /// SwifterSwift: UIImage with .alwaysOriginal rendering mode.
     var original: UIImage {
         return withRenderingMode(.alwaysOriginal)
     }
-
+    
     /// SwifterSwift: UIImage with .alwaysTemplate rendering mode.
     var template: UIImage {
         return withRenderingMode(.alwaysTemplate)
     }
 }
-extension UIImage{
+public extension UIImage {
     
-     public convenience init?(color: UIColor, size: CGSize = CGSize(width: 1.0, height: 1.0)) {
+    convenience init?(color: UIColor, size: CGSize = CGSize(width: 1.0, height: 1.0)) {
         UIGraphicsBeginImageContextWithOptions(size, true, UIScreen.main.scale)
         defer {
             UIGraphicsEndImageContext()
@@ -38,7 +38,7 @@ extension UIImage{
         }
         self.init(cgImage: cgImage)
     }
-        
+    
     convenience init?(base64String: String, scale: CGFloat = 1.0) {
         guard let data = Data(base64Encoded: base64String) else { return nil }
         self.init(data: data, scale: scale)
@@ -66,11 +66,11 @@ extension UIImage{
         return data
     }
     
-     /// 根据尺寸重新生成图片
-     ///
-     /// - Parameter size: 设置的大小
-     /// - Returns: 新图
-    public func compress(maxLength: CGFloat) -> UIImage? {
+    /// 根据尺寸重新生成图片
+    ///
+    /// - Parameter size: 设置的大小
+    /// - Returns: 新图
+    func compress(maxLength: CGFloat) -> UIImage? {
         
         if maxLength <= 0 {
             return self
@@ -97,7 +97,7 @@ extension UIImage{
         }else{
             return self
         }
-     }
+    }
     /// 切圆角
     ///
     /// - Parameters:
@@ -111,13 +111,13 @@ extension UIImage{
         } else {
             cornerRadius = maxRadius
         }
-
+        
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
-
+        
         let rect = CGRect(origin: .zero, size: size)
         UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius).addClip()
         draw(in: rect)
-
+        
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
@@ -126,7 +126,7 @@ extension UIImage{
 }
 
 public extension UIImage {
-     /// 加载bundle中的图片
+    /// 加载bundle中的图片
     /// - Parameters:
     ///   - name: 图片名称
     ///   - bundleForClass: 类型

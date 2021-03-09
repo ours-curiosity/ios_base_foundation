@@ -25,6 +25,16 @@ class ViewController: UIViewController {
         
         self.btn.sizeToFit()
         DebugPrint(self.btn.titleWidth())
+        
+        self.testLinebreak()
+    }
+    
+    func testLinebreak() {
+        
+        let string = "aisdgjlkajdg"
+        
+        print("line break count: \(string.lineBreakCount())")
+        
     }
     
     func testUIFit() {

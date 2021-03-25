@@ -232,15 +232,14 @@ public extension String {
     ///
     /// - Parameter string: 需要检测的字符串
     /// - Returns: 空返回true
-    func isEmpty(string: Any?) -> Bool {
+    static func isEmpty(string: Any?) -> Bool {
         var empty = true
-        if string != nil {
-            let newStringVaule = removeHeadAndTailSpaceAndNewlines()
+        if var newStringVaule = string as? String {
+            newStringVaule = newStringVaule.removeHeadAndTailSpaceAndNewlines()
             if newStringVaule.count > 0 {
                 empty = false
             }
         }
-        
         return empty
     }
     

@@ -1,5 +1,12 @@
 # CTBaseFoundation ChangeLog
 ----
+### 0.7.11.0
+> 1. 优化字符串判空逻辑
+
+### 0.7.10.0
+> 1. 更新`emoji`判断逻辑
+> 2. `String`扩展中添加计算换行数的方法
+
 ### 0.7.9.0
 > 1. 修复`UIImageExtensions`部分`extension`的可见性
 

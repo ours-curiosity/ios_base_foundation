@@ -1,5 +1,8 @@
 # CTBaseFoundation ChangeLog
 ----
+### 0.7.12.0
+> 1. 添加`Model`转`Data`方法 `EncodableExtension.swift`
+
 ### 0.7.11.0
 > 1. 优化字符串判空逻辑
 

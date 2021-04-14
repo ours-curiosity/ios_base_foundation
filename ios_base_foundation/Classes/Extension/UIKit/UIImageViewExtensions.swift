@@ -59,4 +59,13 @@ public extension UIImageView {
     }
 }
 
+public extension UIImageView {
+    
+    /// 转换为灰度图（walker）
+    func ct_convertToGreyScale() {
+        guard let img = self.image else { return }
+        guard let grayImg = img.ct_greyScaleImage() else { return }
+        self.image = grayImg
+    }
+}
 #endif

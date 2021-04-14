@@ -141,5 +141,23 @@ public extension UIImage {
         }
         return UIImage.init(named: name ?? "", in: bundle, compatibleWith: nil)
     }
+}
+
+public extension UIImage {
     
+    /// 返回当前图片的灰度图片(walker)
+    /// - Returns: 转换后的灰度图片
+    func ct_greyScaleImage() -> UIImage? {
+        guard let imageRef = self.cgImage else { return nil }
+        let width:Int = imageRef.width
+        let height:Int = imageRef.height
+        let colorSpace:CGColorSpace = CGColorSpaceCreateDeviceGray()
+        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.none.rawValue)
+        let context:CGContext = CGContext(data: nil, width: width, height: height, bitsPerComponent: 8, bytesPerRow: 0, space: colorSpace, bitmapInfo: bitmapInfo.rawValue)!
+        let rect:CGRect = CGRect.init(x: 0, y: 0, width: width, height: height)
+        context.draw(imageRef, in: rect)
+        guard let outPutImage:CGImage = context.makeImage() else { return nil }
+        let grayImage = UIImage.init(cgImage: outPutImage, scale: self.scale, orientation: self.imageOrientation)
+        return grayImage
+    }
 }

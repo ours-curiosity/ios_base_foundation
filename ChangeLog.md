@@ -1,5 +1,10 @@
 # CTBaseFoundation ChangeLog
 ----
+
+### 0.7.13.0
+> 1. `UIImageExtensions` 添加将图片转换为灰度图方法`ct_grayImage`
+> 2. `UIImageViewExtensions`添加转换为灰度的方法`ct_convertToGreyScale`
+
 ### 0.7.12.0
 > 1. 添加`Model`转`Data`方法 `EncodableExtension.swift`
 

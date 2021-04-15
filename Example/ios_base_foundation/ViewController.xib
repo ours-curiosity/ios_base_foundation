@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="ios_base_foundation_Example" customModuleProvider="target">
             <connections>
+                <outlet property="imgVIew" destination="jtg-ob-tiS" id="MN3-69-bcf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,14 +20,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9p-Lv-fgC">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9p-Lv-fgC">
                     <rect key="frame" x="171" y="181" width="72" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button" image="pencil" catalog="system"/>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jtg-ob-tiS">
+                    <rect key="frame" x="87" y="267" width="240" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="Zpr-ef-uPH"/>
+                        <constraint firstAttribute="width" constant="240" id="lP2-iE-fUS"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="jtg-ob-tiS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RWU-7Q-izu"/>
+                <constraint firstItem="H9p-Lv-fgC" firstAttribute="centerX" secondItem="jtg-ob-tiS" secondAttribute="centerX" id="drX-E7-w7u"/>
+                <constraint firstItem="H9p-Lv-fgC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="137" id="mZP-VA-Bwj"/>
+                <constraint firstItem="jtg-ob-tiS" firstAttribute="top" secondItem="H9p-Lv-fgC" secondAttribute="bottom" constant="64" id="sZu-gz-j6g"/>
+            </constraints>
             <point key="canvasLocation" x="93" y="110"/>
         </view>
     </objects>

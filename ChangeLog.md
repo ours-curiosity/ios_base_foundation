@@ -1,6 +1,10 @@
 # CTBaseFoundation ChangeLog
 ----
 
+### 0.7.14.0
+> 1. 完善图片转换灰度图方法，可以带`alpha`
+
+
 ### 0.7.13.0
 > 1. `UIImageExtensions` 添加将图片转换为灰度图方法`ct_grayImage`
 > 2. `UIImageViewExtensions`添加转换为灰度的方法`ct_convertToGreyScale`

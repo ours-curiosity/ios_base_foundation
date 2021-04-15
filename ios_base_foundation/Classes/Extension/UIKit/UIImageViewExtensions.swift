@@ -67,5 +67,12 @@ public extension UIImageView {
         guard let grayImg = img.ct_greyScaleImage() else { return }
         self.image = grayImg
     }
+    
+    /// 转换为带透明度的灰度图
+    func ct_convertToGreyScaleWithAlpha() {
+        guard let img = self.image else { return }
+        guard let grayImg = img.ct_greyScaleAlphaImage() else { return }
+        self.image = grayImg
+    }
 }
 #endif

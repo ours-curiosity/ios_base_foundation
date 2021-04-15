@@ -10,10 +10,11 @@ import UIKit
 import CTBaseFoundation
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imgVIew: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.white
+        self.view.backgroundColor = UIColor.gray
 //        UIImage.imageNamed("", bundleForClass: type(of: self), bundleName: "ios_base")
         
         DebugPrint("a","b","c", canPrint: false)
@@ -27,6 +28,10 @@ class ViewController: UIViewController {
         DebugPrint(self.btn.titleWidth())
         
         self.testLinebreak()
+        
+        self.imgVIew.image = UIImage.init(named: "test")
+//        self.imgVIew.ct_convertToGreyScale()
+        self.imgVIew.ct_convertToGreyScaleWithAlpha()
     }
     
     func testLinebreak() {

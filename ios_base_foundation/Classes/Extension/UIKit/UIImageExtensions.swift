@@ -145,7 +145,7 @@ public extension UIImage {
 
 public extension UIImage {
     
-    /// 返回当前图片的灰度图片(walker)
+    /// 返回当前图片的灰度图片，黑底(walker)
     /// - Returns: 转换后的灰度图片
     func ct_greyScaleImage() -> UIImage? {
         guard let imageRef = self.cgImage else { return nil }
@@ -159,5 +159,20 @@ public extension UIImage {
         guard let outPutImage:CGImage = context.makeImage() else { return nil }
         let grayImage = UIImage.init(cgImage: outPutImage, scale: self.scale, orientation: self.imageOrientation)
         return grayImage
+    }
+    
+    /// 返回当前图片的灰度图片，带alpha (walker)
+    /// - Returns: 转换后的灰度图片
+    func ct_greyScaleAlphaImage() -> UIImage? {
+        let context = CIContext(options: nil)
+        if let filter = CIFilter(name: "CIPhotoEffectNoir") {
+            filter.setValue(CIImage(image: self), forKey: kCIInputImageKey)
+            if let output = filter.outputImage {
+                if let cgImage = context.createCGImage(output, from: output.extent) {
+                    return UIImage(cgImage: cgImage)
+                }
+            }
+        }
+        return nil
     }
 }

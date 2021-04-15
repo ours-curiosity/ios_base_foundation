@@ -165,7 +165,7 @@ public extension UIImage {
     /// - Returns: 转换后的灰度图片
     func ct_greyScaleAlphaImage() -> UIImage? {
         let context = CIContext(options: nil)
-        if let filter = CIFilter(name: "CIPhotoEffectNoir") {
+        if let filter = CIFilter(name: "CIPhotoEffectTonal") {
             filter.setValue(CIImage(image: self), forKey: kCIInputImageKey)
             if let output = filter.outputImage {
                 if let cgImage = context.createCGImage(output, from: output.extent) {
